@@ -17,6 +17,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "importHelpers": true,
+    "paths": {
+      "solias-components": [
+        "./dist/solias-components"
+      ]
+    },
     "target": "ES2022",
     "module": "ES2022",
     "lib": [
