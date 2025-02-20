@@ -1,0 +1,21 @@
+.solias {
+  &__container {
+    margin: 8px auto;
+    padding: 0 15px;
+  }
+  &__grid {
+    display: grid;
+    column-gap: var(--solias-gutter-space);
+    row-gap: var(--solias-gutter-space);
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-columns: repeat(12, 1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    @for $i from 1 through 12 {
+      .cell-#{$i} {
+        justify-self: stretch;
+        grid-column: span #{$i};
+      }
+    }
+  }
+}
