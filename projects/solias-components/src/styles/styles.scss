@@ -5,4 +5,11 @@
 * {
   --solias-default-font-size: 0.875rem;
   --solias-gutter-space: 1rem;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--solias-color-surface);
+  color: var(--solias-color-on-surface);
 }
