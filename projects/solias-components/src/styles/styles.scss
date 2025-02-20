@@ -1,2 +1,7 @@
-@use './grid';
-@use './responsive';
+@use "./grid";
+@use "./responsive";
+
+* {
+  --solias-default-font-size: 0.875rem;
+  --solias-gutter-space: 1rem;
+}
