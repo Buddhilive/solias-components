@@ -10,6 +10,7 @@ input {
 
 select {
   @extend %default-input-styles;
+  height: 2.125rem;
 }
 
 textarea {
@@ -19,7 +20,10 @@ textarea {
 %default-input-styles {
   display: block;
   font-size: var(--solias-default-font-size);
+  line-height: 1rem;
   padding: 0.5rem;
+  inline-size: 100%;
+  background-clip: border-box;
   border: 0.0625rem solid var(--solias-color-outline);
   outline: none;
   border-radius: 0.25rem;
