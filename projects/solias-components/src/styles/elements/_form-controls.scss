@@ -1,0 +1,34 @@
+label {
+  display: block;
+  font-size: var(--solias-default-font-size);
+  margin-bottom: 0.25rem;
+}
+
+input {
+  @extend %default-input-styles;
+}
+
+select {
+  @extend %default-input-styles;
+}
+
+textarea {
+  @extend %default-input-styles;
+}
+
+%default-input-styles {
+  display: block;
+  font-size: var(--solias-default-font-size);
+  padding: 0.5rem;
+  border: 0.0625rem solid var(--solias-color-outline);
+  outline: none;
+  border-radius: 0.25rem;
+  background-color: var(--solias-color-background);
+  color: var(--solias-color-on-background);
+  width: 100%;
+  &:focus,
+  &:active,
+  &:focus-visible {
+    border-color: var(--solias-color-primary);
+  }
+}
