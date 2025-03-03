@@ -17,9 +17,12 @@ export class AppComponent {
   secondaryColor = '#6c757d';
   tertiaryColor = '#ffc107';
   generateTheme() {
-    const colorTheme = `
+    this.generatedTheme = `
 /* Solias Custom Theme */
 :root {
+  ${THEME_TYPOGRAPHY}\n
+  ${THEME_SPACING}\n
+  ${THEME_SHADOWS}\n
   /* Primary Colors */
   --color-primary: ${this.primaryColor};
   --color-primary-hover: ${this.darkenColor(this.primaryColor, 40)};
@@ -49,7 +52,10 @@ export class AppComponent {
   --color-error-hover: #c82333; /* Darker red on hover */
   --color-error-active: #bd2130; /* Even darker red on active */
   --color-on-error: #ffffff; /* Text color on error background */
+}
 
+/* Light Mode */
+.light {
   /* Background and Surface Colors */
   --color-background: #ffffff;
   --color-surface: #f8f9fa;
@@ -62,54 +68,17 @@ export class AppComponent {
 }
 
 /* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Primary Colors */
-    --color-primary: ${this.primaryColor};
-    --color-primary-hover: ${this.darkenColor(this.primaryColor, 40)};
-    --color-primary-active: ${this.darkenColor(this.primaryColor, 80)};
-    --color-on-primary: ${this.getContrastColor(this.primaryColor)};
+.dark {
+  /* Background and Surface Colors */
+  --color-background: #121212;
+  --color-surface: #1e1e1e;
+  --color-on-background: #e0e0e0;
+  --color-on-surface: #f5f5f5;
 
-    /* Secondary Colors */
-    --color-secondary: ${this.secondaryColor};
-    --color-secondary-hover: ${this.darkenColor(this.secondaryColor, 20)};
-    --color-secondary-active: ${this.darkenColor(this.secondaryColor, 40)};
-    --color-on-secondary: ${this.getContrastColor(this.secondaryColor)};
-
-    /* Tertiary Colors */
-    --color-tertiary: ${this.tertiaryColor};
-    --color-tertiary-hover: ${this.darkenColor(this.tertiaryColor, 20)};
-    --color-tertiary-active: ${this.darkenColor(this.tertiaryColor, 40)};
-    --color-on-tertiary: ${this.getContrastColor(this.tertiaryColor)};
-
-    /* Success Colors */
-    --color-success: #28a745; /* Green */
-    --color-success-hover: #218838; /* Darker green on hover */
-    --color-success-active: #1e7e34; /* Even darker green on active */
-    --color-on-success: #ffffff; /* Text color on success background */
-
-    /* Error Colors */
-    --color-error: #dc3545; /* Red */
-    --color-error-hover: #c82333; /* Darker red on hover */
-    --color-error-active: #bd2130; /* Even darker red on active */
-    --color-on-error: #ffffff; /* Text color on error background */
-
-    /* Background and Surface Colors */
-    --color-background: #121212;
-    --color-surface: #1e1e1e;
-    --color-on-background: #e0e0e0;
-    --color-on-surface: #f5f5f5;
-
-    /* Borders and Dividers */
-    --color-border: #343a40;
-    --color-divider: #2d2d2d;
-  }
+  /* Borders and Dividers */
+  --color-border: #343a40;
+  --color-divider: #2d2d2d;
 }`;
-
-    this.generatedTheme = `${colorTheme}\n
-    ${THEME_TYPOGRAPHY}\n
-    ${THEME_SPACING}\n
-    ${THEME_SHADOWS}`;
   }
 
   private darkenColor(color: string, percentage: number): string {
