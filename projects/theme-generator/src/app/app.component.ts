@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'theme-generator';
+  generatedTheme!: string;
+  primaryColor = '#1a73e8';
+  secondaryColor = '#6c757d';
+  tertiaryColor = '#ffc107';
+  generateTheme() {
+    
+  }
 }
