@@ -40,20 +40,17 @@
       <textarea name="remarks" id="remarks"></textarea>
     </div>
     <div class="cell-3">
-      <label>Maki</label>
-      <input type="checkbox" name="food" id="1">
-      <label>Tempura</label>
-      <input type="checkbox" name="food" id="2">
       <solias-checkbox [(ngModel)]="active" value="hello">
         Custom Checkbox
       </solias-checkbox>
-      {{active}}
     </div>
     <div class="cell-3">
-      <label>Male</label>
-      <input type="radio" name="gender" id="1" value="hello3" [(ngModel)]="active">
-      <label>Female</label>
-      <input type="radio" name="gender" id="2" value="hello32" [(ngModel)]="active">
+      @for (item of options; track $index) {
+        <solias-radio [(ngModel)]="selectedValue" [value]="item.value" name="country">
+          {{item.label}}
+        </solias-radio>
+      }
+      {{selectedValue}}
     </div>
   </div>
   <div class="solias__container">

@@ -1,0 +1,12 @@
+<label class="solias-radio">
+  <input
+    type="radio"
+    [name]="name"
+    [value]="value"
+    [checked]="checked"
+    [disabled]="disabled"
+    (change)="onRadioChange($event)"
+  />
+  <span class="checkmark"></span>
+  <ng-content></ng-content>
+</label>

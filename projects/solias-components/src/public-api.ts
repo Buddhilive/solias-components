@@ -3,3 +3,4 @@
  */
 
 export * from './lib/checkbox/checkbox.component';
+export * from './lib/radio/radio.component';
