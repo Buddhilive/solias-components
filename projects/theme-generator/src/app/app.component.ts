@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { THEME_TYPOGRAPHY } from './constants/typography.const';
 import { THEME_SPACING } from './constants/spacing.const';
-import { THEME_SHADOWS } from './constants/shadows.const';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +21,6 @@ export class AppComponent {
 :root {
   ${THEME_TYPOGRAPHY}\n
   ${THEME_SPACING}\n
-  ${THEME_SHADOWS}\n
   /* Primary Colors */
   --color-primary: ${this.primaryColor};
   --color-primary-hover: ${this.darkenColor(this.primaryColor, 40)};
