@@ -5,8 +5,8 @@
   }
   &__grid {
     display: grid;
-    column-gap: var(--solias-gutter-space);
-    row-gap: var(--solias-gutter-space);
+    column-gap: var(--spacing-md);
+    row-gap: var(--spacing-md);
     justify-items: stretch;
     align-items: stretch;
     grid-template-columns: repeat(12, 1fr);

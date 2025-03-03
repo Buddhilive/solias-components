@@ -1,107 +1,116 @@
-/* Light Theme */
-.light {
-  --solias-color-primary: rgb(68 94 145);
-  --solias-color-surface-tint: rgb(68 94 145);
-  --solias-color-on-primary: rgb(255 255 255);
-  --solias-color-primary-container: rgb(216 226 255);
-  --solias-color-on-primary-container: rgb(0 26 65);
-  --solias-color-secondary: rgb(87 94 113);
-  --solias-color-on-secondary: rgb(255 255 255);
-  --solias-color-secondary-container: rgb(219 226 249);
-  --solias-color-on-secondary-container: rgb(20 27 44);
-  --solias-color-tertiary: rgb(113 85 115);
-  --solias-color-on-tertiary: rgb(255 255 255);
-  --solias-color-tertiary-container: rgb(251 215 252);
-  --solias-color-on-tertiary-container: rgb(41 19 45);
-  --solias-color-error: rgb(186 26 26);
-  --solias-color-on-error: rgb(255 255 255);
-  --solias-color-error-container: rgb(255 218 214);
-  --solias-color-on-error-container: rgb(65 0 2);
-  --solias-color-background: rgb(249 249 255);
-  --solias-color-on-background: rgb(26 27 32);
-  --solias-color-surface: rgb(249 249 255);
-  --solias-color-on-surface: rgb(26 27 32);
-  --solias-color-surface-variant: rgb(225 226 236);
-  --solias-color-on-surface-variant: rgb(68 71 79);
-  --solias-color-outline: rgb(116 119 127);
-  --solias-color-outline-variant: rgb(196 198 208);
-  --solias-color-shadow: rgb(0 0 0);
-  --solias-color-scrim: rgb(0 0 0);
-  --solias-color-inverse-surface: rgb(47 48 54);
-  --solias-color-inverse-on-surface: rgb(240 240 247);
-  --solias-color-inverse-primary: rgb(173 198 255);
-  --solias-color-primary-fixed: rgb(216 226 255);
-  --solias-color-on-primary-fixed: rgb(0 26 65);
-  --solias-color-primary-fixed-dim: rgb(173 198 255);
-  --solias-color-on-primary-fixed-variant: rgb(43 70 120);
-  --solias-color-secondary-fixed: rgb(219 226 249);
-  --solias-color-on-secondary-fixed: rgb(20 27 44);
-  --solias-color-secondary-fixed-dim: rgb(191 198 220);
-  --solias-color-on-secondary-fixed-variant: rgb(63 71 89);
-  --solias-color-tertiary-fixed: rgb(251 215 252);
-  --solias-color-on-tertiary-fixed: rgb(41 19 45);
-  --solias-color-tertiary-fixed-dim: rgb(222 188 223);
-  --solias-color-on-tertiary-fixed-variant: rgb(88 62 91);
-  --solias-color-surface-dim: rgb(217 217 224);
-  --solias-color-surface-bright: rgb(249 249 255);
-  --solias-color-surface-container-lowest: rgb(255 255 255);
-  --solias-color-surface-container-low: rgb(243 243 250);
-  --solias-color-surface-container: rgb(237 237 244);
-  --solias-color-surface-container-high: rgb(232 231 238);
-  --solias-color-surface-container-highest: rgb(226 226 233);
-  --solias-color-surface-hover: rgb(217 217 224);
+/* Solias Custom Theme */
+:root {
+  --font-size-base: 16px; /* Base font size */
+  --font-size-sm: 0.875rem; /* Small font size */
+  --font-size-md: 1rem; /* Medium font size */
+  --font-size-lg: 1.25rem; /* Large font size */
+  --font-size-xl: 1.5rem; /* Extra large font size */
+  --font-size-xxl: 2rem; /* Extra extra large font size */
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-base: 1.5;
+  --line-height-sm: 1.25;
+  --line-height-lg: 1.75;
+
+  --spacing-xxs: 0.25rem; /* 4px */
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-sm: 0.75rem; /* 12px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-xxl: 3rem; /* 48px */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark Theme */
+.light {
+  /* Primary Colors */
+  --color-primary: #ecc227;
+  --color-primary-hover: #c49a00;
+  --color-primary-active: #9c7200;
+  --color-on-primary: #000000;
+
+  /* Secondary Colors */
+  --color-secondary: #0075e8;
+  --color-secondary-hover: #0061d4;
+  --color-secondary-active: #004dc0;
+  --color-on-secondary: #ffffff;
+
+  /* Tertiary Colors */
+  --color-tertiary: #9083aa;
+  --color-tertiary-hover: #7c6f96;
+  --color-tertiary-active: #685b82;
+  --color-on-tertiary: #000000;
+
+  /* Success Colors */
+  --color-success: #28a745; /* Green */
+  --color-success-hover: #218838; /* Darker green on hover */
+  --color-success-active: #1e7e34; /* Even darker green on active */
+  --color-on-success: #ffffff; /* Text color on success background */
+
+  /* Error Colors */
+  --color-error: #dc3545; /* Red */
+  --color-error-hover: #c82333; /* Darker red on hover */
+  --color-error-active: #bd2130; /* Even darker red on active */
+  --color-on-error: #ffffff; /* Text color on error background */
+
+  /* Background and Surface Colors */
+  --color-background: #ffffff;
+  --color-surface: #f8f9fa;
+  --color-on-background: #212529;
+  --color-on-surface: #343a40;
+
+  /* Borders and Dividers */
+  --color-border: #dee2e6;
+  --color-divider: #e9ecef;
+}
+
+/* Dark Mode */
 .dark {
-  --solias-color-primary: rgb(173 198 255);
-  --solias-color-surface-tint: rgb(173 198 255);
-  --solias-color-on-primary: rgb(16 47 96);
-  --solias-color-primary-container: rgb(43 70 120);
-  --solias-color-on-primary-container: rgb(216 226 255);
-  --solias-color-secondary: rgb(191 198 220);
-  --solias-color-on-secondary: rgb(41 48 65);
-  --solias-color-secondary-container: rgb(63 71 89);
-  --solias-color-on-secondary-container: rgb(219 226 249);
-  --solias-color-tertiary: rgb(222 188 223);
-  --solias-color-on-tertiary: rgb(64 40 67);
-  --solias-color-tertiary-container: rgb(88 62 91);
-  --solias-color-on-tertiary-container: rgb(251 215 252);
-  --solias-color-error: rgb(255 180 171);
-  --solias-color-on-error: rgb(105 0 5);
-  --solias-color-error-container: rgb(147 0 10);
-  --solias-color-on-error-container: rgb(255 218 214);
-  --solias-color-background: rgb(17 19 24);
-  --solias-color-on-background: rgb(226 226 233);
-  --solias-color-surface: rgb(17 19 24);
-  --solias-color-on-surface: rgb(226 226 233);
-  --solias-color-surface-variant: rgb(68 71 79);
-  --solias-color-on-surface-variant: rgb(196 198 208);
-  --solias-color-outline: rgb(142 144 153);
-  --solias-color-outline-variant: rgb(68 71 79);
-  --solias-color-shadow: rgb(0 0 0);
-  --solias-color-scrim: rgb(0 0 0);
-  --solias-color-inverse-surface: rgb(226 226 233);
-  --solias-color-inverse-on-surface: rgb(47 48 54);
-  --solias-color-inverse-primary: rgb(68 94 145);
-  --solias-color-primary-fixed: rgb(216 226 255);
-  --solias-color-on-primary-fixed: rgb(0 26 65);
-  --solias-color-primary-fixed-dim: rgb(173 198 255);
-  --solias-color-on-primary-fixed-variant: rgb(43 70 120);
-  --solias-color-secondary-fixed: rgb(219 226 249);
-  --solias-color-on-secondary-fixed: rgb(20 27 44);
-  --solias-color-secondary-fixed-dim: rgb(191 198 220);
-  --solias-color-on-secondary-fixed-variant: rgb(63 71 89);
-  --solias-color-tertiary-fixed: rgb(251 215 252);
-  --solias-color-on-tertiary-fixed: rgb(41 19 45);
-  --solias-color-tertiary-fixed-dim: rgb(222 188 223);
-  --solias-color-on-tertiary-fixed-variant: rgb(88 62 91);
-  --solias-color-surface-dim: rgb(17 19 24);
-  --solias-color-surface-bright: rgb(55 57 62);
-  --solias-color-surface-container-lowest: rgb(12 14 19);
-  --solias-color-surface-container-low: rgb(26 27 32);
-  --solias-color-surface-container: rgb(30 31 37);
-  --solias-color-surface-container-high: rgb(40 42 47);
-  --solias-color-surface-container-highest: rgb(51 53 58);
-  --solias-color-surface-hover: rgb(55 57 62);
+  /* Primary Colors */
+  --color-primary: #ecc227;
+  --color-primary-hover: #c49a00;
+  --color-primary-active: #9c7200;
+  --color-on-primary: #000000;
+
+  /* Secondary Colors */
+  --color-secondary: #0075e8;
+  --color-secondary-hover: #0061d4;
+  --color-secondary-active: #004dc0;
+  --color-on-secondary: #ffffff;
+
+  /* Tertiary Colors */
+  --color-tertiary: #9083aa;
+  --color-tertiary-hover: #7c6f96;
+  --color-tertiary-active: #685b82;
+  --color-on-tertiary: #000000;
+
+  /* Success Colors */
+  --color-success: #28a745; /* Green */
+  --color-success-hover: #218838; /* Darker green on hover */
+  --color-success-active: #1e7e34; /* Even darker green on active */
+  --color-on-success: #ffffff; /* Text color on success background */
+
+  /* Error Colors */
+  --color-error: #dc3545; /* Red */
+  --color-error-hover: #c82333; /* Darker red on hover */
+  --color-error-active: #bd2130; /* Even darker red on active */
+  --color-on-error: #ffffff; /* Text color on error background */
+
+  /* Background and Surface Colors */
+  --color-background: #121212;
+  --color-surface: #1e1e1e;
+  --color-on-background: #e0e0e0;
+  --color-on-surface: #f5f5f5;
+
+  /* Borders and Dividers */
+  --color-border: #343a40;
+  --color-divider: #2d2d2d;
 }

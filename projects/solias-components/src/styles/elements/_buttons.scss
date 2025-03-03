@@ -1,6 +1,6 @@
 .solias-btn {
   display: block;
-  font-size: var(--solias-default-font-size);
+  font-size: var(--font-size-sm);
   padding: 0.5rem;
   border-width: 0.0625rem;
   border-style: solid;
@@ -9,43 +9,39 @@
   cursor: pointer;
   transition: all 0.25s ease-in-out;
   &--primary {
-    background-color: var(--solias-color-primary);
-    color: var(--solias-color-on-primary);
-    border-color: var(--solias-color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border-color: var(--color-primary);
     &:hover {
-      background-color: var(--solias-color-on-primary-container);
-      border-color: var(--solias-color-on-primary-container);
-      color: var(--solias-color-primary-container);
+      background-color: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
     }
   }
   &--secondary {
-    background-color: var(--solias-color-secondary);
-    color: var(--solias-color-on-secondary);
-    border-color: var(--solias-color-secondary);
+    background-color: var(--color-secondary);
+    color: var(--color-on-secondary);
+    border-color: var(--color-secondary);
     &:hover {
-      background-color: var(--solias-color-on-secondary-container);
-      border-color: var(--solias-color-on-secondary-container);
-      color: var(--solias-color-secondary-container);
+      background-color: var(--color-secondary-hover);
+      border-color: var(--color-secondary-hover);
     }
   }
   &--tertiary {
-    background-color: var(--solias-color-tertiary);
-    color: var(--solias-color-on-tertiary);
-    border-color: var(--solias-color-tertiary);
+    background-color: var(--color-tertiary);
+    color: var(--color-on-tertiary);
+    border-color: var(--color-tertiary);
     &:hover {
-      background-color: var(--solias-color-on-tertiary-container);
-      border-color: var(--solias-color-on-tertiary-container);
-      color: var(--solias-color-tertiary-container);
+      background-color: var(--color-tertiary-hover);
+      border-color: var(--color-tertiary-hover);
     }
   }
   &--error {
-    background-color: var(--solias-color-error);
-    color: var(--solias-color-on-error);
-    border-color: var(--solias-color-error);
+    background-color: var(--color-error);
+    color: var(--color-on-error);
+    border-color: var(--color-error);
     &:hover {
-      background-color: var(--solias-color-on-error-container);
-      border-color: var(--solias-color-on-error-container);
-      color: var(--solias-color-error-container);
+      background-color: var(--color-error-hover);
+      border-color: var(--color-error-hover);
     }
   }
 }

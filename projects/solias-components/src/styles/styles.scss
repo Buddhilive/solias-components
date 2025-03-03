@@ -4,14 +4,14 @@
 @use "./elements/base";
 
 * {
-  --solias-default-font-size: 0.875rem;
-  --solias-gutter-space: 1rem;
+  --font-size-sm: 0.875rem;
+  --spacing-md: 1rem;
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: var(--solias-color-surface);
-  color: var(--solias-color-on-surface);
+  background-color: var(--color-background);
+  color: var(--color-on-background);
   line-height: 1.6;
 }
