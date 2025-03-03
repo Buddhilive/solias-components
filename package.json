@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start:theme-generator": "ng serve theme-generator"
   },
   "private": true,
   "dependencies": {
