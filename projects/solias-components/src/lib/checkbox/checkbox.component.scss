@@ -1,0 +1,53 @@
+.solias-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 0.0625rem solid var(--color-border);
+    border-radius: 0.25rem;
+    background-color: var(--color-background);
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+
+  &:hover input ~ .checkmark {
+    background-color: var(--color-surface);
+  }
+
+  input:checked ~ .checkmark {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    &:after {
+      display: block;
+    }
+  }
+
+  .checkmark:after {
+    left: 0.5rem;
+    top: 0.125rem;
+    width: 0.3125rem;
+    height: 0.625rem;
+    border: solid white;
+    border-width: 0 0.2rem 0.2rem 0;
+    transform: rotate(45deg);
+  }
+}

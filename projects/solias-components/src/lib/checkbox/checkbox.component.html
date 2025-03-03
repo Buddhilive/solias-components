@@ -1,0 +1,18 @@
+<label class="solias-checkbox">
+  <input
+    type="checkbox"
+    [ngModel]="checked"
+    (ngModelChange)="onCheckboxChange($event)"
+    [disabled]="disabled"
+    [indeterminate]="indeterminate"
+    [attr.id]="id"
+    [attr.name]="name"
+    [attr.value]="value"
+    [attr.required]="required"
+    [attr.aria-label]="ariaLabel"
+    [attr.aria-labelledby]="ariaLabelledby"
+    [attr.aria-describedby]="ariaDescribedby"
+  />
+  <span class="checkmark"></span>
+  <ng-content></ng-content>
+</label>
