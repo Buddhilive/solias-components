@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve previewer",
-    "build": "ng build",
+    "build": "ng build solias-components",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start:theme-generator": "ng serve theme-generator"
