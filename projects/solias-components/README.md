@@ -1,24 +1,13 @@
-# SoliasComponents
+# Solias Components
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+This is a component and style library for Angular.
 
-## Code scaffolding
+## Add styles
 
-Run `ng generate component component-name --project solias-components` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project solias-components`.
-> Note: Don't forget to add `--project solias-components` or else it will be added to the default project in your `angular.json` file. 
+Add below line in `angular.json` file of your project.
 
-## Build
-
-Run `ng build solias-components` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build solias-components`, go to the dist folder `cd dist/solias-components` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test solias-components` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```json
+"styles": [
+  "node_modules/@solias/solias-components/styles/styles.css"
+]
+```

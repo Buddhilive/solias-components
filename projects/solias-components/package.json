@@ -1,6 +1,6 @@
 {
-  "name": "solias-components",
-  "version": "0.0.1",
+  "name": "@solias/solias-components",
+  "version": "0.0.1-beta.1",
   "peerDependencies": {
     "@angular/common": "^18.2.0",
     "@angular/core": "^18.2.0"
