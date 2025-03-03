@@ -38,6 +38,18 @@ export class AppComponent {
   --color-tertiary-active: ${this.darkenColor(this.tertiaryColor, 40)};
   --color-on-tertiary: ${this.getContrastColor(this.tertiaryColor)};
 
+  /* Success Colors */
+  --color-success: #28a745; /* Green */
+  --color-success-hover: #218838; /* Darker green on hover */
+  --color-success-active: #1e7e34; /* Even darker green on active */
+  --color-on-success: #ffffff; /* Text color on success background */
+
+  /* Error Colors */
+  --color-error: #dc3545; /* Red */
+  --color-error-hover: #c82333; /* Darker red on hover */
+  --color-error-active: #bd2130; /* Even darker red on active */
+  --color-on-error: #ffffff; /* Text color on error background */
+
   /* Background and Surface Colors */
   --color-background: #ffffff;
   --color-surface: #f8f9fa;
@@ -69,6 +81,18 @@ export class AppComponent {
     --color-tertiary-hover: ${this.darkenColor(this.tertiaryColor, 20)};
     --color-tertiary-active: ${this.darkenColor(this.tertiaryColor, 40)};
     --color-on-tertiary: ${this.getContrastColor(this.tertiaryColor)};
+
+    /* Success Colors */
+    --color-success: #28a745; /* Green */
+    --color-success-hover: #218838; /* Darker green on hover */
+    --color-success-active: #1e7e34; /* Even darker green on active */
+    --color-on-success: #ffffff; /* Text color on success background */
+
+    /* Error Colors */
+    --color-error: #dc3545; /* Red */
+    --color-error-hover: #c82333; /* Darker red on hover */
+    --color-error-active: #bd2130; /* Even darker red on active */
+    --color-on-error: #ffffff; /* Text color on error background */
 
     /* Background and Surface Colors */
     --color-background: #121212;
