@@ -1,5 +1,6 @@
 /* Solias Custom Theme */
 :root {
+  /* Typography */
   --font-size-base: 16px; /* Base font size */
   --font-size-sm: 0.875rem; /* Small font size */
   --font-size-md: 1rem; /* Medium font size */
@@ -16,6 +17,7 @@
   --line-height-sm: 1.25;
   --line-height-lg: 1.75;
 
+  /* Spacing */
   --spacing-xxs: 0.25rem; /* 4px */
   --spacing-xs: 0.5rem; /* 8px */
   --spacing-sm: 0.75rem; /* 12px */
@@ -24,30 +26,26 @@
   --spacing-xl: 2rem; /* 32px */
   --spacing-xxl: 3rem; /* 48px */
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
-}
-
-.light {
   /* Primary Colors */
-  --color-primary: #ecc227;
-  --color-primary-hover: #c49a00;
-  --color-primary-active: #9c7200;
-  --color-on-primary: #000000;
+  --color-primary: #1a73e8; /* Blue */
+  --color-primary-hover: #1557b0; /* Darker blue on hover */
+  --color-primary-active: #104080; /* Even darker blue on active */
+  --color-primary-tint: #a8c7fa; /* Light tint of primary */
+  --color-on-primary: #ffffff; /* Text color on primary background */
 
   /* Secondary Colors */
-  --color-secondary: #0075e8;
-  --color-secondary-hover: #0061d4;
-  --color-secondary-active: #004dc0;
-  --color-on-secondary: #ffffff;
+  --color-secondary: #6c757d; /* Gray */
+  --color-secondary-hover: #5a6268; /* Darker gray on hover */
+  --color-secondary-active: #495057; /* Even darker gray on active */
+  --color-secondary-tint: #d3d8dc; /* Light tint of secondary */
+  --color-on-secondary: #ffffff; /* Text color on secondary background */
 
   /* Tertiary Colors */
-  --color-tertiary: #9083aa;
-  --color-tertiary-hover: #7c6f96;
-  --color-tertiary-active: #685b82;
-  --color-on-tertiary: #000000;
+  --color-tertiary: #ffc107; /* Yellow */
+  --color-tertiary-hover: #e0a800; /* Darker yellow on hover */
+  --color-tertiary-active: #c79100; /* Even darker yellow on active */
+  --color-tertiary-tint: #ffe69e; /* Light tint of tertiary */
+  --color-on-tertiary: #000000; /* Text color on tertiary background */
 
   /* Success Colors */
   --color-success: #28a745; /* Green */
@@ -60,57 +58,46 @@
   --color-error-hover: #c82333; /* Darker red on hover */
   --color-error-active: #bd2130; /* Even darker red on active */
   --color-on-error: #ffffff; /* Text color on error background */
+}
+
+/* Light Mode */
+.light {
+  /* Disabled Colors */
+  --color-disabled: #e9ecef; /* Light gray for disabled states */
+  --color-on-disabled: #6c757d; /* Text color on disabled background */
+
+  /* Readonly Colors */
+  --color-readonly: #f8f9fa; /* Very light gray for readonly states */
+  --color-on-readonly: #495057; /* Text color on readonly background */
 
   /* Background and Surface Colors */
-  --color-background: #ffffff;
-  --color-surface: #f8f9fa;
-  --color-on-background: #212529;
-  --color-on-surface: #343a40;
+  --color-background: #ffffff; /* Light mode background */
+  --color-surface: #f8f9fa; /* Light mode surface (e.g., cards, modals) */
+  --color-on-background: #212529; /* Text color on background */
+  --color-on-surface: #343a40; /* Text color on surface */
 
   /* Borders and Dividers */
-  --color-border: #dee2e6;
-  --color-divider: #e9ecef;
+  --color-border: #dee2e6; /* Light mode border */
+  --color-divider: #e9ecef; /* Light mode divider */
 }
 
 /* Dark Mode */
 .dark {
-  /* Primary Colors */
-  --color-primary: #ecc227;
-  --color-primary-hover: #c49a00;
-  --color-primary-active: #9c7200;
-  --color-on-primary: #000000;
+  /* Disabled Colors */
+  --color-disabled: #343a40; /* Dark gray for disabled states */
+  --color-on-disabled: #adb5bd; /* Text color on disabled background */
 
-  /* Secondary Colors */
-  --color-secondary: #0075e8;
-  --color-secondary-hover: #0061d4;
-  --color-secondary-active: #004dc0;
-  --color-on-secondary: #ffffff;
-
-  /* Tertiary Colors */
-  --color-tertiary: #9083aa;
-  --color-tertiary-hover: #7c6f96;
-  --color-tertiary-active: #685b82;
-  --color-on-tertiary: #000000;
-
-  /* Success Colors */
-  --color-success: #28a745; /* Green */
-  --color-success-hover: #218838; /* Darker green on hover */
-  --color-success-active: #1e7e34; /* Even darker green on active */
-  --color-on-success: #ffffff; /* Text color on success background */
-
-  /* Error Colors */
-  --color-error: #dc3545; /* Red */
-  --color-error-hover: #c82333; /* Darker red on hover */
-  --color-error-active: #bd2130; /* Even darker red on active */
-  --color-on-error: #ffffff; /* Text color on error background */
+  /* Readonly Colors */
+  --color-readonly: #2d2d2d; /* Very dark gray for readonly states */
+  --color-on-readonly: #e9ecef; /* Text color on readonly background */
 
   /* Background and Surface Colors */
-  --color-background: #121212;
-  --color-surface: #1e1e1e;
-  --color-on-background: #e0e0e0;
-  --color-on-surface: #f5f5f5;
+  --color-background: #121212; /* Dark mode background */
+  --color-surface: #1e1e1e; /* Dark mode surface (e.g., cards, modals) */
+  --color-on-background: #e0e0e0; /* Text color on background */
+  --color-on-surface: #f5f5f5; /* Text color on surface */
 
   /* Borders and Dividers */
-  --color-border: #343a40;
-  --color-divider: #2d2d2d;
+  --color-border: #343a40; /* Dark mode border */
+  --color-divider: #2d2d2d; /* Dark mode divider */
 }

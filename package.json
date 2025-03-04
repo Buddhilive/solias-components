@@ -7,7 +7,8 @@
     "build": "ng build solias-components",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start:theme-generator": "ng serve theme-generator"
+    "start:theme-generator": "ng serve theme-generator",
+    "publish:lib": "cd dist/solias-components && npm publish --access public"
   },
   "private": true,
   "dependencies": {

@@ -1,9 +1,10 @@
 .solias-radio {
-  display: block;
-  position: relative;
-  padding-left: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
   cursor: pointer;
-  font-size: 16px;
+  font-size: var(--font-size-sm);
   user-select: none;
 
   input {
@@ -13,26 +14,22 @@
   }
 
   .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 1.5rem;
     width: 1.5rem;
     background-color: var(--color-background);
+    border: 0.0625rem solid var(--color-border);
     border-radius: 50%;
     transition: background-color 0.3s ease;
 
-    &:after {
-      content: "";
-      position: absolute;
+    &__inner {
       display: none;
-      top: 50%;
-      left: 50%;
-      width: 50%;
-      height: 50%;
+      width: 1rem;
+      height: 1rem;
       border-radius: 50%;
-      background: var(--color-background);
-      transform: translate(-50%, -50%);
+      background: var(--color-primary);
     }
   }
 
@@ -40,9 +37,9 @@
     background-color: var(--color-surface);
   }
 
-  input:checked ~ .checkmark {
-    background-color: var(--color-primary);
-    &:after {
+  &:has(input:checked) .checkmark {
+    border-color: var(--color-primary);
+    &__inner {
       display: block;
     }
   }
@@ -52,9 +49,9 @@
     cursor: not-allowed;
   }
 
-  input:disabled:checked ~ .checkmark {
+  &:has(input:checked) ~ .checkmark {
     background-color: #90caf9;
-    &:after {
+    &__inner {
       background-color: #f5f5f5;
     }
   }
