@@ -45,14 +45,14 @@
   }
 
   input:disabled ~ .checkmark {
-    background-color: #e0e0e0;
+    background-color: var(--color-disabled);
     cursor: not-allowed;
   }
 
-  &:has(input:checked) ~ .checkmark {
-    background-color: #90caf9;
+  &:has(input:checked:disabled) .checkmark {
+    border-color: var(--color-on-disabled);
     &__inner {
-      background-color: #f5f5f5;
+      background-color: var(--color-on-disabled);;
     }
   }
 }

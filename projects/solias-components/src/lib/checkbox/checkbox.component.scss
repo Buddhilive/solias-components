@@ -1,7 +1,8 @@
 .solias-checkbox {
-  display: inline-block;
-  position: relative;
-  padding-left: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
   cursor: pointer;
   user-select: none;
 
@@ -14,40 +15,42 @@
   }
 
   .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 1.5rem;
     width: 1.5rem;
     border: 0.0625rem solid var(--color-border);
     border-radius: 0.25rem;
     background-color: var(--color-background);
-    &:after {
-      content: "";
-      position: absolute;
+    &__inner {
       display: none;
+      width: 0.4rem;
+      height: 0.8rem;
+      border: solid var(--color-on-primary);
+      border-width: 0 0.125rem 0.125rem 0;
+      transform: rotate(45deg);
     }
   }
 
-  &:hover input ~ .checkmark {
-    background-color: var(--color-surface);
-  }
-
-  input:checked ~ .checkmark {
+  &:has(input:checked) .checkmark {
     border-color: var(--color-primary);
     background-color: var(--color-primary);
-    &:after {
+    &__inner {
       display: block;
     }
   }
 
-  .checkmark:after {
-    left: 0.5rem;
-    top: 0.125rem;
-    width: 0.3125rem;
-    height: 0.625rem;
-    border: solid white;
-    border-width: 0 0.2rem 0.2rem 0;
-    transform: rotate(45deg);
+  input:disabled ~ .checkmark {
+    background-color: var(--color-disabled);
+    cursor: not-allowed;
+  }
+
+  &:has(input:checked:disabled) .checkmark {
+    background-color: var(--color-disabled);
+    border-color: var(--color-disabled);
+    &__inner {
+      border-color: var(--color-on-disabled);
+    }
   }
 }
