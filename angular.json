@@ -52,7 +52,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/previewer",
+            "outputPath": "projects/solias-components/temp",
             "index": "projects/previewer/src/index.html",
             "browser": "projects/previewer/src/main.ts",
             "polyfills": ["zone.js"],
@@ -81,7 +81,7 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "none"
             },
             "development": {
               "optimization": false,

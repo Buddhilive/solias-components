@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@use "../../solias-components/src/styles/themes/default_theme.scss";
-@use "../../solias-components/src/styles/styles.scss";
+/* @use "../../solias-components/src/styles/themes/default_theme.scss"; */
+/* @use "../../solias-components/src/styles/styles.scss"; */
 
-body {
+/* body {
     font-family: sans-serif;
-}
+} */
+@import "tailwindcss";
