@@ -1,0 +1,19 @@
+<div class="solias-previewer">
+  <aside class="solias-previewer__sidebar">
+    <ul class="solias-previewer__list">
+      @for (item of componentList; track $index) {
+      <li class="solias-previewer__item" (click)="selectComponent(item)">
+        {{ item.name }}
+      </li>
+      }
+    </ul>
+  </aside>
+  <main class="solias-previewer__main">
+    <div class="solias-previewer__canvas">
+      <app-component-loader></app-component-loader>
+    </div>
+    <div class="solias-previewer__controls">
+      <app-component-settings></app-component-settings>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,27 @@
+.solias-previewer {
+  display: flex;
+  height: 100dvh;
+  &__sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  &__main {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__list {
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__item {
+    cursor: pointer;
+  }
+}
