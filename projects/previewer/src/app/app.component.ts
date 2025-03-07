@@ -6,7 +6,7 @@ import { ComponentPreviewerComponent } from "./component-previewer/component-pre
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SoliasCheckboxComponent, FormsModule, SoliasRadioComponent, ComponentPreviewerComponent],
+  imports: [SoliasCheckboxComponent, FormsModule, SoliasRadioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
