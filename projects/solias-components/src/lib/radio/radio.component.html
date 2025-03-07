@@ -20,11 +20,11 @@
     }"
   >
     <span
-      class="rounded-full transition-colors"
+      class="rounded-full transition-colors h-4 w-4"
       [ngClass]="{
         hidden: !checked,
-        'h-4 w-4 bg-blue-500': checked && !disabled,
-        'h-4 w-4 bg-neutral-500': checked && disabled
+        'bg-blue-500': checked && !disabled,
+        'bg-neutral-500': checked && disabled
       }"
     ></span>
   </span>
