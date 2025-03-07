@@ -3,6 +3,7 @@ import { setCompodocJson } from "@storybook/addon-docs/angular";
 import docJson from "../documentation.json";
 import 'zone.js';
 setCompodocJson(docJson);
+import '!style-loader!css-loader!postcss-loader!../../previewer/src/styles.scss';
 
 const preview: Preview = {
   parameters: {
