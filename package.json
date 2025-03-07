@@ -9,7 +9,7 @@
     "test": "ng test",
     "start:theme-generator": "ng serve theme-generator",
     "publish:lib": "cd dist/solias-components && npm publish --access public",
-    "storybook": "ng run solias-components:storybook",
+    "storybook": "ng run solias-components:storybook --ci",
     "build-storybook": "ng run solias-components:build-storybook"
   },
   "private": true,
