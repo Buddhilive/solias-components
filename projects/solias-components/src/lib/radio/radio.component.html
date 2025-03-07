@@ -1,4 +1,6 @@
-<label class="solias-radio">
+<label
+  class="flex items-center gap-2 cursor-pointer text-sm select-none"
+>
   <input
     type="radio"
     [name]="name"
@@ -6,9 +8,25 @@
     [checked]="checked"
     [disabled]="disabled"
     (change)="onRadioChange($event)"
+    class="absolute opacity-0 cursor-pointer"
   />
-  <span class="checkmark">
-    <span class="checkmark__inner"></span>
+  <span
+    class="flex justify-center items-center h-6 w-6 rounded-full transition-colors border border-solid"
+    [ngClass]="{
+      'bg-gray-200 border-gray-400': disabled && !checked,
+      'border-neutral-500 bg-white': disabled && checked,
+      'border-blue-500 bg-white': !disabled && checked,
+      'bg-white border-gray-500': !disabled && !checked,
+    }"
+  >
+    <span
+      class="rounded-full transition-colors"
+      [ngClass]="{
+        hidden: !checked,
+        'h-4 w-4 bg-blue-500': checked && !disabled,
+        'h-4 w-4 bg-neutral-500': checked && disabled
+      }"
+    ></span>
   </span>
   <ng-content></ng-content>
 </label>

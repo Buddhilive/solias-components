@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {
   Component,
   forwardRef,
@@ -9,6 +10,7 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'solias-radio',
+  imports: [CommonModule],
   templateUrl: './radio.component.html',
   styleUrls: ['./radio.component.scss'],
   standalone: true,
