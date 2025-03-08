@@ -50,3 +50,24 @@ export const URLInput: Story = {
     template: `<input soliasInput type="url" placeholder="Enter URL" />`,
   }),
 };
+
+export const inputDisabledState: Story = {
+  render: (args) => ({
+    props: args,
+    template: `<input soliasInput type="text" placeholder="Enter text" [disabled]="true" [value]="'Disabled value'" />`,
+  }),
+};
+
+export const inputReadonlyState: Story = {
+  render: (args) => ({
+    props: args,
+    template: `<input soliasInput type="text" placeholder="Enter text" [readonly]="true" [value]="'Readonly value'" [disabled] />`,
+  }),
+};
+
+export const inputRequiredState: Story = {
+  render: (args) => ({
+    props: args,
+    template: `<input soliasInput type="text" placeholder="Enter text" [required]="true" />`,
+  }),
+};

@@ -91,6 +91,26 @@
                 "defaultValue": "{\r\n  args: {\r\n    disabled: true,\r\n    checked: false\r\n  }\r\n}"
             },
             {
+                "name": "emailInput",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"email\" placeholder=\"Enter email\" />`,\r\n  }),\r\n}"
+            },
+            {
+                "name": "inputDisabledState",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" placeholder=\"Enter text\" [disabled]=\"true\" />`,\r\n  }),\r\n}"
+            },
+            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -148,7 +168,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"number\" name=\"name\" />`,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"number\" placeholder=\"Enter number\" />`,\r\n  }),\r\n}"
+            },
+            {
+                "name": "passwordInput",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"password\" placeholder=\"Enter password\" />`,\r\n  }),\r\n}"
             },
             {
                 "name": "preview",
@@ -191,6 +221,16 @@
                 "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
             },
             {
+                "name": "telInput",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"tel\" placeholder=\"Enter telephone\" />`,\r\n  }),\r\n}"
+            },
+            {
                 "name": "textInput",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -198,7 +238,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" name=\"name\" />`,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" placeholder=\"Enter text\" />`,\r\n  }),\r\n}"
+            },
+            {
+                "name": "URLInput",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"url\" placeholder=\"Enter URL\" />`,\r\n  }),\r\n}"
             }
         ],
         "functions": [],
@@ -354,6 +404,88 @@
                     "defaultValue": "{\r\n  title: 'Form Controls/Radio',\r\n  component: SoliasRadioComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    disabled: {\r\n      control: 'boolean',\r\n      label: 'Disabled',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    checked: {\r\n      control: 'boolean',\r\n      label: 'Checked',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    label: {\r\n      control: 'text',\r\n      label: 'Label',\r\n      type: 'string',\r\n    },\r\n    id: {\r\n      control: 'text',\r\n      label: 'Id',\r\n      type: 'string',\r\n    },\r\n    value: {\r\n      control: 'text',\r\n      label: 'Value',\r\n      type: 'string',\r\n    },\r\n    name: {\r\n      control: 'text',\r\n      label: 'Name',\r\n      type: 'string',\r\n    }\r\n  },\r\n  args: { valueChange: fn() },\r\n}"
                 }
             ],
+            "projects/solias-components/src/stories/input.stories.ts": [
+                {
+                    "name": "emailInput",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"email\" placeholder=\"Enter email\" />`,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "inputDisabledState",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" placeholder=\"Enter text\" [disabled]=\"true\" />`,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SoliasInputDirective>",
+                    "defaultValue": "{\r\n  component: SoliasInputDirective,\r\n  title: 'Form Controls/Inputs',\r\n  tags: ['autodocs'],\r\n}"
+                },
+                {
+                    "name": "numberInput",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"number\" placeholder=\"Enter number\" />`,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "passwordInput",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"password\" placeholder=\"Enter password\" />`,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "telInput",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"tel\" placeholder=\"Enter telephone\" />`,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "textInput",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" placeholder=\"Enter text\" />`,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "URLInput",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"url\" placeholder=\"Enter URL\" />`,\r\n  }),\r\n}"
+                }
+            ],
             "projects/solias-components/src/stories/button.stories.ts": [
                 {
                     "name": "Large",
@@ -404,38 +536,6 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
-                }
-            ],
-            "projects/solias-components/src/stories/input.stories.ts": [
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<SoliasInputDirective>",
-                    "defaultValue": "{\r\n  component: SoliasInputDirective,\r\n  title: 'Form Controls/Inputs',\r\n  tags: ['autodocs'],\r\n}"
-                },
-                {
-                    "name": "numberInput",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"number\" name=\"name\" />`,\r\n  }),\r\n}"
-                },
-                {
-                    "name": "textInput",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" name=\"name\" />`,\r\n  }),\r\n}"
                 }
             ],
             "projects/solias-components/.storybook/preview.ts": [
@@ -648,6 +748,26 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "emailInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "inputDisabledState",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -668,7 +788,37 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "passwordInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "telInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "textInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "URLInput",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
