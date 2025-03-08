@@ -3,6 +3,7 @@
 >
   <input
     type="radio"
+    [id]="id"
     [name]="name"
     [value]="value"
     [checked]="checked"
@@ -28,5 +29,5 @@
       }"
     ></span>
   </span>
-  <ng-content></ng-content>
+  <label [for]="id">{{ label }}</label>
 </label>

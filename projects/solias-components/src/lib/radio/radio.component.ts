@@ -27,8 +27,10 @@ export class SoliasRadioComponent implements ControlValueAccessor {
   @Input() name: string = '';
   @Input() disabled: boolean = false;
   @Input() checked: boolean = false;
+  @Input() label: string = '';
+  @Input() id: string = '';
 
-  @Output() change = new EventEmitter<Event>();
+  @Output() valueChange = new EventEmitter<Event>();
 
   private _onChange: (value: any) => void = () => {};
   private _onTouched: () => void = () => {};
@@ -53,6 +55,6 @@ export class SoliasRadioComponent implements ControlValueAccessor {
     this.checked = true;
     this._onChange(this.value);
     this._onTouched();
-    this.change.emit(event);
+    this.valueChange.emit(event);
   }
 }
