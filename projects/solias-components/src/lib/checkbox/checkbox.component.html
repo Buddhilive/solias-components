@@ -1,4 +1,4 @@
-<label class="solias-checkbox">
+<label class="flex items-center gap-2 cursor-pointer text-sm select-none">
   <input
     type="checkbox"
     [ngModel]="checked"
@@ -6,15 +6,28 @@
     [disabled]="disabled"
     [indeterminate]="indeterminate"
     [attr.id]="id"
-    [attr.name]="name"
-    [attr.value]="value"
-    [attr.required]="required"
-    [attr.aria-label]="ariaLabel"
-    [attr.aria-labelledby]="ariaLabelledby"
-    [attr.aria-describedby]="ariaDescribedby"
+    [name]="name"
+    [value]="value"
+    [required]="required"
+    class="absolute opacity-0 cursor-pointer h-0 w-0"
   />
-  <span class="checkmark">
-    <span class="checkmark__inner"></span>
+  <span
+    class="flex justify-center items-center h-6 w-6 rounded transition-colors border border-solid"
+    [ngClass]="{
+    'border-gray-300 bg-gray-300 dark:border-gray-50 dark:bg-gray-50': disabled && !checked,
+    'border-gray-400 bg-gray-400 dark:border-gray-100 dark:bg-gray-100': disabled && checked,
+    'border-blue-500 bg-blue-500': !disabled && checked,
+    'bg-gray-200 border-gray-200': !disabled && !checked,
+    }"
+  >
+    <span
+      class="material-icons !text-base"
+      [ngClass]="{
+        '!hidden text-transparent': !checked,
+        'text-blue-50': checked && !disabled,
+        'text-gray-500': checked && disabled
+      }"
+    >check</span>
   </span>
-  <ng-content></ng-content>
+  <span class="text-gray-800 dark:text-gray-200">{{ label }}</span>
 </label>

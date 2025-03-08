@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {
   Component,
   EventEmitter,
@@ -10,7 +11,7 @@ import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/f
 @Component({
   selector: 'solias-checkbox',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './checkbox.component.html',
   styleUrl: './checkbox.component.scss',
   providers: [
@@ -29,18 +30,15 @@ export class SoliasCheckboxComponent implements ControlValueAccessor {
   @Input() name: string = '';
   @Input() value: string = '';
   @Input() required: boolean = false;
-  @Input() ariaLabel: string = '';
-  @Input() ariaLabelledby: string = '';
-  @Input() ariaDescribedby: string = '';
+  @Input() label: string = '';
 
-  @Output() checkedChange = new EventEmitter<boolean>();
+  @Output() valueChange = new EventEmitter<boolean>();
 
   onChange: any = () => {};
   onTouched: any = () => {};
 
   writeValue(value: boolean): void {
     this.checked = value;
-    this.checkedChange.emit(this.checked);
   }
 
   registerOnChange(fn: any): void {
@@ -58,6 +56,6 @@ export class SoliasCheckboxComponent implements ControlValueAccessor {
   onCheckboxChange(event: boolean): void {
     this.checked = event;
     this.onChange(this.checked);
-    this.checkedChange.emit(this.checked);
+    this.valueChange.emit(this.checked);
   }
 }

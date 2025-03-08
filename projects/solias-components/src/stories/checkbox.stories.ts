@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { SoliasRadioComponent } from '../lib/radio/radio.component';
 import { fn } from '@storybook/test';
+import { SoliasCheckboxComponent } from '../lib/checkbox/checkbox.component';
 
-const meta: Meta<SoliasRadioComponent> = {
-  title: 'Form Controls/Radio',
-  component: SoliasRadioComponent,
+const meta: Meta<SoliasCheckboxComponent> = {
+  title: 'Form Controls/Checkbox',
+  component: SoliasCheckboxComponent,
   tags: ['autodocs'],
   argTypes: {
     disabled: {
@@ -42,7 +42,7 @@ const meta: Meta<SoliasRadioComponent> = {
 };
 
 export default meta;
-type Story = StoryObj<SoliasRadioComponent>;
+type Story = StoryObj<SoliasCheckboxComponent>;
 
 export const defaultState: Story = {
   args: {
