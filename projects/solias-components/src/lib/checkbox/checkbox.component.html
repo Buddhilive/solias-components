@@ -1,8 +1,8 @@
 <label class="flex items-center gap-2 cursor-pointer text-sm select-none">
   <input
     type="checkbox"
-    [ngModel]="checked"
-    (ngModelChange)="onCheckboxChange($event)"
+    [checked]="checked"
+    (change)="onCheckboxChange($event)"
     [disabled]="disabled"
     [indeterminate]="indeterminate"
     [attr.id]="id"

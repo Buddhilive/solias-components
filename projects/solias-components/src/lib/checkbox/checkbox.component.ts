@@ -6,12 +6,12 @@ import {
   Input,
   Output,
 } from '@angular/core';
-import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'solias-checkbox',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [CommonModule],
   templateUrl: './checkbox.component.html',
   styleUrl: './checkbox.component.scss',
   providers: [
@@ -32,7 +32,7 @@ export class SoliasCheckboxComponent implements ControlValueAccessor {
   @Input() required: boolean = false;
   @Input() label: string = '';
 
-  @Output() valueChange = new EventEmitter<boolean>();
+  @Output() valueChange = new EventEmitter<Event>();
 
   onChange: any = () => {};
   onTouched: any = () => {};
@@ -53,9 +53,10 @@ export class SoliasCheckboxComponent implements ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  onCheckboxChange(event: boolean): void {
-    this.checked = event;
+  onCheckboxChange(event: Event): void {
+    const chbx = event.target as HTMLInputElement;
+    this.checked = chbx.checked;
     this.onChange(this.checked);
-    this.valueChange.emit(this.checked);
+    this.valueChange.emit(event);
   }
 }
