@@ -47,7 +47,6 @@ export class SoliasInputDirective implements OnInit, OnDestroy {
 
     // Dynamic classes based on state
     this.updateDisabledClasses();
-    this.updateRequiredClasses();
     this.updateReadOnlyClasses();
   }
 
@@ -61,15 +60,6 @@ export class SoliasInputDirective implements OnInit, OnDestroy {
       this.renderer.removeClass(nativeElement, 'bg-gray-100');
       this.renderer.removeClass(nativeElement, 'dark:bg-gray-700');
       this.renderer.removeClass(nativeElement, 'cursor-not-allowed');
-    }
-  }
-
-  private updateRequiredClasses() {
-    const nativeElement = this.el.nativeElement;
-    if (nativeElement.required) {
-      this.renderer.addClass(nativeElement, 'border-red-500');
-    } else {
-      this.renderer.removeClass(nativeElement, 'border-red-500');
     }
   }
 
@@ -97,9 +87,6 @@ export class SoliasInputDirective implements OnInit, OnDestroy {
             case 'disabled':
               this.updateDisabledClasses();
               break;
-            case 'required':
-              this.updateRequiredClasses();
-              break;
             case 'readonly':
               this.updateReadOnlyClasses();
               break;
@@ -111,7 +98,7 @@ export class SoliasInputDirective implements OnInit, OnDestroy {
     // Start observing the input element for attribute changes
     this.observer.observe(nativeElement, {
       attributes: true, // Watch for attribute changes
-      attributeFilter: ['disabled', 'required', 'readonly'], // Only watch for these specific attributes
+      attributeFilter: ['disabled', 'readonly'], // Only watch for these specific attributes
     });
   }
 }

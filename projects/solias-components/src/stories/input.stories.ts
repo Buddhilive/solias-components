@@ -23,31 +23,10 @@ export const numberInput: Story = {
   }),
 };
 
-export const emailInput: Story = {
-  render: (args) => ({
-    props: args,
-    template: `<input soliasInput type="email" placeholder="Enter email" />`,
-  }),
-};
-
-export const telInput: Story = {
-  render: (args) => ({
-    props: args,
-    template: `<input soliasInput type="tel" placeholder="Enter telephone" />`,
-  }),
-};
-
 export const passwordInput: Story = {
   render: (args) => ({
     props: args,
     template: `<input soliasInput type="password" placeholder="Enter password" />`,
-  }),
-};
-
-export const URLInput: Story = {
-  render: (args) => ({
-    props: args,
-    template: `<input soliasInput type="url" placeholder="Enter URL" />`,
   }),
 };
 
@@ -62,12 +41,5 @@ export const inputReadonlyState: Story = {
   render: (args) => ({
     props: args,
     template: `<input soliasInput type="text" placeholder="Enter text" [readonly]="true" [value]="'Readonly value'" [disabled] />`,
-  }),
-};
-
-export const inputRequiredState: Story = {
-  render: (args) => ({
-    props: args,
-    template: `<input soliasInput type="text" placeholder="Enter text" [required]="true" />`,
   }),
 };

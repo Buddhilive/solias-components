@@ -1,0 +1,70 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as InputStories from './input.stories';
+
+<Meta of={InputStories} />
+
+# Solias Input
+
+The `soliasInput` is an Angular directive designed to enhance the styling and behavior of standard input elements. It can be applied to various input types, including text, number, password, and others.
+
+## Usage
+
+To use the `soliasInput`, simply add the `soliasInput` attribute to any input element.
+
+```html
+<input soliasInput type="text" placeholder="Enter text" />
+```
+
+## Supported Input Types
+
+The directive is compatible with the following input types:
+
+-   `text`
+-   `number`
+-   `password`
+-   `tel`
+-   `email`
+-   `url`
+
+## Examples
+
+### Text Input
+
+<Canvas of={InputStories.textInput} />
+
+
+A standard text input field.
+
+### Number Input
+
+<Canvas of={InputStories.numberInput} />
+
+An input field specifically for numbers.
+
+### Password Input
+
+<Canvas of={InputStories.passwordInput} />
+
+A secure input field for passwords, masking the entered characters.
+
+### Disabled State
+
+<Canvas of={InputStories.inputDisabledState} />
+
+An input field that is disabled and cannot be interacted with.
+
+### Readonly State
+
+<Canvas of={InputStories.inputReadonlyState} />
+
+An input field that is readonly and cannot be edited. Note, if disabled is also set, the disabled styling will take precedence.
+
+## Attributes
+
+-   `soliasInput`: The directive attribute that enables the enhanced styling and behavior.
+-   `type`: Specifies the type of input field (e.g., `text`, `number`, `password`).
+-   `placeholder`: A hint that describes the expected value of the input field.
+-   `disabled`: A boolean attribute that disables the input field.
+-   `readonly`: A boolean attribute that makes the input field read-only.
+-   `value`: Sets the initial value of the input field.
