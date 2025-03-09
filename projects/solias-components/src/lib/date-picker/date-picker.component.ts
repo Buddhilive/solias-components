@@ -8,12 +8,13 @@ import {
   ElementRef,
   AfterViewInit,
 } from '@angular/core';
+import { SoliasInputDirective } from 'solias-components';
 
 @Component({
   selector: 'solias-datepicker',
   standalone: true,
   templateUrl: './date-picker.component.html',
-  imports: [CommonModule],
+  imports: [CommonModule, SoliasInputDirective],
   styles: [``],
 })
 export class SoliasDatePickerComponent implements AfterViewInit {
