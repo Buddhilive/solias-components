@@ -1,0 +1,66 @@
+<div class="relative">
+  <!-- Input to display selected date -->
+  <div
+    (click)="toggleCalendar()"
+    class="bg-blue-300 dark:bg-blue-700 text-gray-900 dark:text-gray-100 rounded-lg p-2 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
+  >
+    {{ selectedDate ? (selectedDate | date : "yyyy-MM-dd") : "Select a date" }}
+  </div>
+
+  <!-- Calendar Popup -->
+  <div
+    id="calendarPopup"
+    *ngIf="showCalendar"
+    class="absolute mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 w-64 z-10"
+  >
+    <!-- Month and Year Navigation -->
+    <div class="flex justify-between items-center mb-4">
+      <button
+        (click)="previousMonth()"
+        class="text-gray-700 dark:text-gray-300"
+      >
+        &lt;
+      </button>
+      <span class="font-bold text-gray-900 dark:text-gray-100">
+        {{ currentYear }} - {{ currentMonth + 1 | number : "2.0" }}
+      </span>
+      <button (click)="nextMonth()" class="text-gray-700 dark:text-gray-300">
+        &gt;
+      </button>
+    </div>
+
+    <!-- Calendar Grid -->
+    <table class="w-full">
+      <thead>
+        <tr>
+          <th
+            *ngFor="
+              let day of ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+            "
+            class="text-gray-700 dark:text-gray-300 text-sm"
+          >
+            {{ day }}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let week of weeks">
+          <td
+            *ngFor="let day of week"
+            (click)="selectDate(day)"
+            [class.bg-blue-300]="isSelectedDate(day)"
+            [class.text-gray-400]="!isCurrentMonth(day)"
+            [class.cursor-pointer]="isCurrentMonth(day)"
+            [class.text-gray-900]="isCurrentMonth(day) && !isSelectedDate(day)"
+            [class.dark:text-gray-100]="
+              isCurrentMonth(day) && !isSelectedDate(day)
+            "
+            class="text-center p-2 rounded-full hover:bg-blue-200 dark:hover:bg-blue-600"
+          >
+            {{ day.getDate() }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
