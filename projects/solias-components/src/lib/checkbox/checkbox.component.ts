@@ -13,7 +13,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './checkbox.component.html',
-  styleUrl: './checkbox.component.scss',
+  styles: [],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

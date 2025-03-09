@@ -12,7 +12,7 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
   selector: 'solias-radio',
   imports: [CommonModule],
   templateUrl: './radio.component.html',
-  styleUrls: ['./radio.component.scss'],
+  styles: [],
   standalone: true,
   providers: [
     {
