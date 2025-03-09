@@ -5,7 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
-/projects/solias-components/temp
+/projects/solias-components/styles/dist
 
 # Node
 /node_modules

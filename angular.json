@@ -85,7 +85,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "projects/solias-components/temp",
+            "outputPath": "dist/previewer",
             "index": "projects/previewer/src/index.html",
             "browser": "projects/previewer/src/main.ts",
             "polyfills": [

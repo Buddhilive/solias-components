@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve previewer",
-    "build": "ng build previewer && ng build solias-components",
+    "build": "npm run build:tailwind && ng build solias-components",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:tailwind": "npx @tailwindcss/cli -i ./projects/previewer/src/styles.scss -o ./projects/solias-components/styles/styles.css --minify",
+    "build:tailwind": "npx @tailwindcss/cli -i ./projects/solias-components/styles/tailwind.scss -o ./projects/solias-components/styles/dist/styles.css --minify",
     "start:theme-generator": "ng serve theme-generator",
     "publish:lib": "cd dist/solias-components && npm publish --access public",
     "storybook": "ng run solias-components:storybook --ci",
