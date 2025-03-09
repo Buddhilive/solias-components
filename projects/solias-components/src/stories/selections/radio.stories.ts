@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { SoliasRadioComponent } from '../lib/radio/radio.component';
+import { SoliasRadioComponent } from '../../public-api';
 import { fn } from '@storybook/test';
 
 const meta: Meta<SoliasRadioComponent> = {
-  title: 'Form Controls/Radio',
+  title: 'Selections/Radio',
   component: SoliasRadioComponent,
   tags: ['autodocs'],
   argTypes: {

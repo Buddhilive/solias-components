@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { fn } from '@storybook/test';
-import { SoliasCheckboxComponent } from '../lib/checkbox/checkbox.component';
+import { SoliasCheckboxComponent } from '../../public-api';
 
 const meta: Meta<SoliasCheckboxComponent> = {
-  title: 'Form Controls/Checkbox',
+  title: 'Selections/Checkbox',
   component: SoliasCheckboxComponent,
   tags: ['autodocs'],
   argTypes: {

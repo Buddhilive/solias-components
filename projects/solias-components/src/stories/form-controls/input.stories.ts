@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { SoliasInputDirective } from '../public-api';
+import { SoliasInputDirective } from '../../public-api';
 
 const meta: Meta<SoliasInputDirective> = {
   component: SoliasInputDirective,
