@@ -4,9 +4,9 @@ import {
   Input,
   Output,
   EventEmitter,
-  viewChild,
   ViewChild,
   ElementRef,
+  AfterViewInit,
 } from '@angular/core';
 
 @Component({
@@ -14,12 +14,10 @@ import {
   standalone: true,
   templateUrl: './date-picker.component.html',
   imports: [CommonModule],
-  styles: [],
+  styles: [``],
 })
-export class SoliasDatePickerComponent {
-  @ViewChild('calendarPopup') calendarPopup:
-    | ElementRef<HTMLDivElement>
-    | undefined;
+export class SoliasDatePickerComponent implements AfterViewInit {
+  @ViewChild('calendarPopover') calendarPopover!: ElementRef<HTMLDivElement>;
   @Input() selectedDate: Date | null = null; // Input for two-way binding
   @Output() selectedDateChange = new EventEmitter<Date>(); // Output for two-way binding
 
@@ -32,10 +30,30 @@ export class SoliasDatePickerComponent {
     this.generateCalendar();
   }
 
+  ngAfterViewInit(): void {
+    // Adjust popover position dynamically
+    const popover = this.calendarPopover.nativeElement;
+    popover.addEventListener('toggle', () => {
+      if (popover.matches(':popover-open') && popover.previousElementSibling) {
+        const inputRect =
+          popover.previousElementSibling.getBoundingClientRect();
+        const popoverRect = popover.getBoundingClientRect();
+
+        // Check if popover overflows the viewport
+        if (inputRect.bottom + popoverRect.height > window.innerHeight) {
+          popover.style.top = `${inputRect.top - popoverRect.height - 1}px`;
+          popover.style.left = `${inputRect.left - 1}px`;
+        } else {
+          popover.style.top = `${inputRect.bottom + 1}px`;
+          popover.style.left = `${inputRect.left - 1}px`;
+        }
+      }
+    });
+  }
+
   // Toggle calendar visibility
   toggleCalendar(): void {
     this.showCalendar = !this.showCalendar;
-    this.calendarPopup?.nativeElement.togglePopover();
   }
 
   // Generate the calendar grid for the current month
