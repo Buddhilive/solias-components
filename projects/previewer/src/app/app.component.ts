@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { SoliasCheckboxComponent, SoliasRadioComponent } from '../../../solias-components/src/public-api';
 import { FormsModule } from '@angular/forms';
-import { ComponentPreviewerComponent } from "./component-previewer/component-previewer.component";
 
 @Component({
   selector: 'app-root',
