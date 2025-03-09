@@ -7,7 +7,9 @@ import {
   ViewChild,
   ElementRef,
   AfterViewInit,
+  forwardRef,
 } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { SoliasInputDirective } from 'solias-components';
 
 @Component({
@@ -16,19 +18,48 @@ import { SoliasInputDirective } from 'solias-components';
   templateUrl: './date-picker.component.html',
   imports: [CommonModule, SoliasInputDirective],
   styles: [``],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => SoliasDatePickerComponent),
+      multi: true,
+    },
+  ],
 })
-export class SoliasDatePickerComponent implements AfterViewInit {
+export class SoliasDatePickerComponent implements AfterViewInit, ControlValueAccessor {
   @ViewChild('calendarPopover') calendarPopover!: ElementRef<HTMLDivElement>;
-  @Input() selectedDate: Date | null = null; // Input for two-way binding
-  @Output() selectedDateChange = new EventEmitter<Date>(); // Output for two-way binding
 
-  showCalendar: boolean = false; // Toggle calendar visibility
+  @Input() selectedDate: Date | null = null; // Input for two-way binding
+  @Input() disabled: boolean = false;
+  @Input() readonly: boolean = false;
+
+  @Output() valueChange = new EventEmitter<Date>(); // Output for two-way binding
+
   currentMonth: number = new Date().getMonth();
   currentYear: number = new Date().getFullYear();
   weeks: Date[][] = [];
 
   constructor() {
     this.generateCalendar();
+  }
+
+  onChange: any = () => {};
+  onTouched: any = () => {};
+
+  writeValue(value: Date): void {
+    this.selectedDate = value;
+  }
+
+  registerOnChange(fn: any): void {
+    this.onChange = fn;
+  }
+
+  registerOnTouched(fn: any): void {
+    this.onTouched = fn;
+  }
+
+  setDisabledState?(isDisabled: boolean): void {
+    this.disabled = isDisabled;
   }
 
   ngAfterViewInit(): void {
@@ -54,7 +85,7 @@ export class SoliasDatePickerComponent implements AfterViewInit {
 
   // Toggle calendar visibility
   toggleCalendar(): void {
-    this.showCalendar = !this.showCalendar;
+    this.calendarPopover.nativeElement.togglePopover();
   }
 
   // Generate the calendar grid for the current month
@@ -111,8 +142,8 @@ export class SoliasDatePickerComponent implements AfterViewInit {
   // Select a date
   selectDate(date: Date): void {
     this.selectedDate = date;
-    this.selectedDateChange.emit(date);
-    this.showCalendar = false; // Hide calendar after selection
+    this.valueChange.emit(date);
+    this.calendarPopover.nativeElement.hidePopover(); // Hide calendar after selection
   }
 
   // Check if a date is the selected date
