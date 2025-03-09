@@ -1,49 +1,96 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { fn } from '@storybook/test';
+import { SoliasButtonDirective } from '../../public-api';
 
-import { ButtonComponent } from './button.component';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
-const meta: Meta<ButtonComponent> = {
+const meta: Meta<SoliasButtonDirective> = {
   title: 'Buttons/Button',
-  component: ButtonComponent,
+  component: SoliasButtonDirective,
   tags: ['autodocs'],
   argTypes: {
-    backgroundColor: {
-      control: 'color',
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'tertiary', 'success', 'error'],
+      table: { defaultValue: { summary: 'primary' } },
+    },
+    size: {
+      control: 'select',
+      options: ['small', 'medium', 'large'],
+      table: { defaultValue: { summary: 'medium' } },
+    },
+    outlined: {
+      control: 'boolean',
+      table: { defaultValue: { summary: 'false' } },
+    },
+    disabled: {
+      control: 'boolean',
+      table: { defaultValue: { summary: 'false' } },
     },
   },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
+  render: (args) => ({
+    props: args,
+    template: `<button soliasButton [variant]="variant" [size]="size" [outlined]="outlined" [disabled]="disabled">Button</button>`,
+  }),
 };
 
 export default meta;
-type Story = StoryObj<ButtonComponent>;
+type Story = StoryObj<SoliasButtonDirective>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    variant: 'primary',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    variant: 'secondary',
+  },
+};
+
+export const Tertiary: Story = {
+  args: {
+    variant: 'tertiary',
+  },
+};
+
+export const Success: Story = {
+  args: {
+    variant: 'success',
+  },
+};
+
+export const Error: Story = {
+  args: {
+    variant: 'error',
   },
 };
 
 export const Large: Story = {
   args: {
+    variant: 'primary',
     size: 'large',
-    label: 'Button',
   },
 };
 
 export const Small: Story = {
   args: {
+    variant: 'primary',
     size: 'small',
-    label: 'Button',
+  },
+};
+
+export const Outlined: Story = {
+  args: {
+    variant: 'primary',
+    outlined: true,
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    variant: 'primary',
+    disabled: true,
   },
 };

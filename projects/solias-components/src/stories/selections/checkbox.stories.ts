@@ -36,8 +36,9 @@ const meta: Meta<SoliasCheckboxComponent> = {
       control: 'text',
       label: 'Name',
       type: 'string',
-    }
+    },
   },
+  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { valueChange: fn() },
 };
 
@@ -54,20 +55,20 @@ export const defaultState: Story = {
 export const Checked: Story = {
   args: {
     disabled: false,
-    checked: true
-  }
+    checked: true,
+  },
 };
 
 export const DisabledChecked: Story = {
   args: {
     disabled: true,
-    checked: true
-  }
+    checked: true,
+  },
 };
 
 export const DisabledUnchecked: Story = {
   args: {
     disabled: true,
-    checked: false
-  }
+    checked: false,
+  },
 };
