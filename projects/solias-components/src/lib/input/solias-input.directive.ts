@@ -1,104 +1,59 @@
 import {
   Directive,
-  ElementRef,
-  Renderer2,
   OnInit,
-  OnDestroy,
+  Input,
+  HostBinding,
+  OnChanges,
+  SimpleChanges,
 } from '@angular/core';
 
 @Directive({
   selector: '[soliasInput]',
   standalone: true,
 })
-export class SoliasInputDirective implements OnInit, OnDestroy {
-  private observer!: MutationObserver;
+export class SoliasInputDirective implements OnInit, OnChanges {
+  @Input() readOnly: boolean = false;
+  @Input() disabled: boolean = false;
+  @Input() validity: 'valid' | 'invalid' | null = null;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  @HostBinding('class') inputClasses: string = '';
+  @HostBinding('attr.disabled') get isDisabled() {
+    return this.disabled ? true : null;
+  }
+
+  @HostBinding('attr.readonly') get isReadOnly() {
+    return this.readOnly ? true : null;
+  }
 
   ngOnInit(): void {
     this.initClasses();
-    this.setupMutationObserver();
   }
 
-  ngOnDestroy(): void {
-    if (this.observer) {
-      this.observer.disconnect();
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['readOnly'] || changes['disabled'] || changes['validity']) {
+      this.initClasses();
     }
   }
 
   private initClasses() {
-    const nativeElement = this.el.nativeElement;
-
     // Base classes
-    this.renderer.addClass(nativeElement, 'text-base');
-    this.renderer.addClass(nativeElement, 'text-gray-900');
-    this.renderer.addClass(nativeElement, 'dark:text-gray-100');
-    this.renderer.addClass(nativeElement, 'bg-white');
-    this.renderer.addClass(nativeElement, 'dark:bg-gray-800');
-    this.renderer.addClass(nativeElement, 'border');
-    this.renderer.addClass(nativeElement, 'border-gray-300');
-    this.renderer.addClass(nativeElement, 'rounded-md');
-    this.renderer.addClass(nativeElement, 'px-3');
-    this.renderer.addClass(nativeElement, 'py-1');
-    this.renderer.addClass(nativeElement, 'focus:ring-2');
-    this.renderer.addClass(nativeElement, 'focus:ring-blue-500');
-    this.renderer.addClass(nativeElement, 'focus:border-blue-500');
-    this.renderer.addClass(nativeElement, 'outline-none');
+    let baseClasses =
+      'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500';
 
-    // Dynamic classes based on state
-    this.updateDisabledClasses();
-    this.updateReadOnlyClasses();
-  }
-
-  private updateDisabledClasses() {
-    const nativeElement = this.el.nativeElement;
-    if (nativeElement.disabled) {
-      this.renderer.addClass(nativeElement, 'bg-gray-100');
-      this.renderer.addClass(nativeElement, 'dark:bg-gray-700');
-      this.renderer.addClass(nativeElement, 'cursor-not-allowed');
-    } else {
-      this.renderer.removeClass(nativeElement, 'bg-gray-100');
-      this.renderer.removeClass(nativeElement, 'dark:bg-gray-700');
-      this.renderer.removeClass(nativeElement, 'cursor-not-allowed');
+    if (this.disabled) {
+      baseClasses =
+        'mb-6 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500';
+    } else if (this.readOnly) {
+      baseClasses =
+        'bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500';
+    } else if (this.validity === 'valid') {
+      baseClasses =
+        'bg-green-50 border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500';
+    } else if (this.validity === 'invalid') {
+      baseClasses =
+        'bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500';
     }
-  }
 
-  private updateReadOnlyClasses() {
-    const nativeElement = this.el.nativeElement;
-    if (nativeElement.readOnly) {
-      this.renderer.addClass(nativeElement, 'bg-gray-50');
-      this.renderer.addClass(nativeElement, 'dark:bg-gray-900');
-      this.renderer.addClass(nativeElement, 'cursor-default');
-    } else {
-      this.renderer.removeClass(nativeElement, 'bg-gray-50');
-      this.renderer.removeClass(nativeElement, 'dark:bg-gray-900');
-      this.renderer.removeClass(nativeElement, 'cursor-default');
-    }
-  }
-
-  private setupMutationObserver() {
-    const nativeElement = this.el.nativeElement;
-
-    // Create a MutationObserver to watch for attribute changes
-    this.observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'attributes') {
-          switch (mutation.attributeName) {
-            case 'disabled':
-              this.updateDisabledClasses();
-              break;
-            case 'readonly':
-              this.updateReadOnlyClasses();
-              break;
-          }
-        }
-      });
-    });
-
-    // Start observing the input element for attribute changes
-    this.observer.observe(nativeElement, {
-      attributes: true, // Watch for attribute changes
-      attributeFilter: ['disabled', 'readonly'], // Only watch for these specific attributes
-    });
+    this.inputClasses = baseClasses;
   }
 }

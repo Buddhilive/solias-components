@@ -33,13 +33,27 @@ export const passwordInput: Story = {
 export const inputDisabledState: Story = {
   render: (args) => ({
     props: args,
-    template: `<input soliasInput type="text" placeholder="Enter text" [disabled]="true" [value]="'Disabled value'" />`,
+    template: `<input soliasInput type="text" [disabled]="true" [value]="'Disabled value'" />`,
   }),
 };
 
 export const inputReadonlyState: Story = {
   render: (args) => ({
     props: args,
-    template: `<input soliasInput type="text" placeholder="Enter text" [readonly]="true" [value]="'Readonly value'" [disabled] />`,
+    template: `<input soliasInput type="text" [readOnly]="true" [value]="'Readonly value'" />`,
   }),
 };
+
+export const inputValidState: Story = {
+  render: (args) => ({
+    props: args,
+    template: `<input soliasInput type="text" [validity]="'valid'" [value]="'Valid value'" />`,
+  }),
+}
+
+export const inputInvalidState: Story = {
+  render: (args) => ({
+    props: args,
+    template: `<input soliasInput type="text" [validity]="'invalid'" [value]="'Invalid value'" />`,
+  }),
+}
