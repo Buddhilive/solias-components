@@ -1,73 +1,39 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { SoliasRadioComponent } from '../../public-api';
-import { fn } from '@storybook/test';
+import { SoliasRadioDirective } from '../../public-api';
 
-const meta: Meta<SoliasRadioComponent> = {
+const meta: Meta<SoliasRadioDirective> = {
   title: 'Selections/Radio',
-  component: SoliasRadioComponent,
+  component: SoliasRadioDirective,
   tags: ['autodocs'],
-  argTypes: {
-    disabled: {
-      control: 'boolean',
-      label: 'Disabled',
-      table: { defaultValue: { summary: 'false' } },
-    },
-    checked: {
-      control: 'boolean',
-      label: 'Checked',
-      table: { defaultValue: { summary: 'false' } },
-    },
-    label: {
-      control: 'text',
-      label: 'Label',
-      type: 'string',
-    },
-    id: {
-      control: 'text',
-      label: 'Id',
-      type: 'string',
-    },
-    value: {
-      control: 'text',
-      label: 'Value',
-      type: 'string',
-    },
-    name: {
-      control: 'text',
-      label: 'Name',
-      type: 'string',
-    }
-  },
-  args: { valueChange: fn() },
 };
 
 export default meta;
-type Story = StoryObj<SoliasRadioComponent>;
+type Story = StoryObj<SoliasRadioDirective>;
 
 export const defaultState: Story = {
-  args: {
-    disabled: false,
-    checked: false,
-  },
+  render: (args) => ({
+    props: args,
+    template: `<input soliasRadio type="radio" />`,
+  }),
 };
 
 export const Checked: Story = {
-  args: {
-    disabled: false,
-    checked: true
-  }
+  render: (args) => ({
+    props: args,
+    template: `<input soliasRadio type="radio" checked />`,
+  }),
 };
 
 export const DisabledChecked: Story = {
-  args: {
-    disabled: true,
-    checked: true
-  }
+  render: (args) => ({
+    props: args,
+    template: `<input soliasRadio type="radio" [disabled]="true" />`,
+  }),
 };
 
 export const DisabledUnchecked: Story = {
-  args: {
-    disabled: true,
-    checked: false
-  }
+  render: (args) => ({
+    props: args,
+    template: `<input soliasRadio type="radio" [disabled]="true" checked />`,
+  }),
 };

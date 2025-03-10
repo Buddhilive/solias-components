@@ -3,6 +3,6 @@
  */
 
 export * from './lib/checkbox/checkbox.directive';
-export * from './lib/radio/radio.component';
+export * from './lib/radio/radio.directive';
 export * from './lib/input/solias-input.directive';
 export * from './lib/button/solias-button.directive';

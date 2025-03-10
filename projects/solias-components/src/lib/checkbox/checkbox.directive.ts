@@ -12,17 +12,11 @@ import {
   standalone: true,
 })
 export class SoliasCheckboxDirective implements OnInit, OnChanges {
-  @Input() readOnly: boolean = false;
   @Input() disabled: boolean = false;
-  @Input() validity: 'valid' | 'invalid' | null = null;
 
   @HostBinding('class') elementClasses: string = '';
   @HostBinding('attr.disabled') get isDisabled() {
     return this.disabled ? true : null;
-  }
-
-  @HostBinding('attr.readonly') get isReadOnly() {
-    return this.readOnly ? true : null;
   }
 
   ngOnInit(): void {
@@ -30,7 +24,7 @@ export class SoliasCheckboxDirective implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['readOnly'] || changes['disabled'] || changes['validity']) {
+    if (changes['readOnly'] || changes['disabled']) {
       this.initClasses();
     }
   }
