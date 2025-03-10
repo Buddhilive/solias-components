@@ -18,7 +18,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    disabled: false,\r\n    checked: true,\r\n  },\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" checked/>`,\r\n  }),\r\n}"
             },
             {
                 "name": "Checked",
@@ -48,7 +48,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    disabled: false,\r\n    checked: false,\r\n  },\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" />`,\r\n  }),\r\n}"
             },
             {
                 "name": "defaultState",
@@ -88,7 +88,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    disabled: true,\r\n    checked: true,\r\n  },\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" disabled />`,\r\n  }),\r\n}"
             },
             {
                 "name": "DisabledChecked",
@@ -108,7 +108,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    disabled: true,\r\n    checked: false,\r\n  },\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" disabled />`,\r\n  }),\r\n}"
             },
             {
                 "name": "DisabledUnchecked",
@@ -138,7 +138,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" placeholder=\"Enter text\" [disabled]=\"true\" [value]=\"'Disabled value'\" />`,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" [disabled]=\"true\" [value]=\"'Disabled value'\" />`,\r\n  }),\r\n}"
+            },
+            {
+                "name": "inputInvalidState",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/form-controls/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" [validity]=\"'invalid'\" [value]=\"'Invalid value'\" />`,\r\n  }),\r\n}"
             },
             {
                 "name": "inputReadonlyState",
@@ -148,7 +158,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" placeholder=\"Enter text\" [readonly]=\"true\" [value]=\"'Readonly value'\" [disabled] />`,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" [readOnly]=\"true\" [value]=\"'Readonly value'\" />`,\r\n  }),\r\n}"
+            },
+            {
+                "name": "inputValidState",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/form-controls/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" [validity]=\"'valid'\" [value]=\"'Valid value'\" />`,\r\n  }),\r\n}"
             },
             {
                 "name": "Large",
@@ -197,8 +217,8 @@
                 "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<SoliasCheckboxComponent>",
-                "defaultValue": "{\r\n  title: 'Selections/Checkbox',\r\n  component: SoliasCheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    disabled: {\r\n      control: 'boolean',\r\n      label: 'Disabled',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    checked: {\r\n      control: 'boolean',\r\n      label: 'Checked',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    label: {\r\n      control: 'text',\r\n      label: 'Label',\r\n      type: 'string',\r\n    },\r\n    id: {\r\n      control: 'text',\r\n      label: 'Id',\r\n      type: 'string',\r\n    },\r\n    value: {\r\n      control: 'text',\r\n      label: 'Value',\r\n      type: 'string',\r\n    },\r\n    name: {\r\n      control: 'text',\r\n      label: 'Name',\r\n      type: 'string',\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { valueChange: fn() },\r\n}"
+                "type": "Meta<SoliasCheckboxDirective>",
+                "defaultValue": "{\r\n  title: 'Selections/Checkbox',\r\n  component: SoliasCheckboxDirective,\r\n  tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -360,7 +380,7 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<SoliasCheckboxComponent>",
+                "rawtype": "StoryObj<SoliasCheckboxDirective>",
                 "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -390,7 +410,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    disabled: false,\r\n    checked: true,\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" checked/>`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "defaultState",
@@ -400,7 +420,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    disabled: false,\r\n    checked: false,\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "DisabledChecked",
@@ -410,7 +430,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    disabled: true,\r\n    checked: true,\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" disabled />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "DisabledUnchecked",
@@ -420,7 +440,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    disabled: true,\r\n    checked: false,\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" disabled />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",
@@ -429,8 +449,8 @@
                     "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<SoliasCheckboxComponent>",
-                    "defaultValue": "{\r\n  title: 'Selections/Checkbox',\r\n  component: SoliasCheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    disabled: {\r\n      control: 'boolean',\r\n      label: 'Disabled',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    checked: {\r\n      control: 'boolean',\r\n      label: 'Checked',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    label: {\r\n      control: 'text',\r\n      label: 'Label',\r\n      type: 'string',\r\n    },\r\n    id: {\r\n      control: 'text',\r\n      label: 'Id',\r\n      type: 'string',\r\n    },\r\n    value: {\r\n      control: 'text',\r\n      label: 'Value',\r\n      type: 'string',\r\n    },\r\n    name: {\r\n      control: 'text',\r\n      label: 'Name',\r\n      type: 'string',\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { valueChange: fn() },\r\n}"
+                    "type": "Meta<SoliasCheckboxDirective>",
+                    "defaultValue": "{\r\n  title: 'Selections/Checkbox',\r\n  component: SoliasCheckboxDirective,\r\n  tags: ['autodocs']\r\n}"
                 }
             ],
             "projects/solias-components/src/stories/selections/radio.stories.ts": [
@@ -638,7 +658,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" placeholder=\"Enter text\" [disabled]=\"true\" [value]=\"'Disabled value'\" />`,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" [disabled]=\"true\" [value]=\"'Disabled value'\" />`,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "inputInvalidState",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/form-controls/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" [validity]=\"'invalid'\" [value]=\"'Invalid value'\" />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "inputReadonlyState",
@@ -648,7 +678,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" placeholder=\"Enter text\" [readonly]=\"true\" [value]=\"'Readonly value'\" [disabled] />`,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" [readOnly]=\"true\" [value]=\"'Readonly value'\" />`,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "inputValidState",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/form-controls/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" [validity]=\"'valid'\" [value]=\"'Valid value'\" />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",
@@ -751,7 +791,7 @@
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<SoliasCheckboxComponent>",
+                    "rawtype": "StoryObj<SoliasCheckboxDirective>",
                     "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -964,7 +1004,27 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "inputInvalidState",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "inputReadonlyState",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "inputValidState",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
