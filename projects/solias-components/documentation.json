@@ -14,7 +14,7 @@
                 "name": "Checked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -24,27 +24,17 @@
                 "name": "Checked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    disabled: false,\r\n    checked: true\r\n  }\r\n}"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRadio type=\"radio\" checked />`,\r\n  }),\r\n}"
             },
             {
                 "name": "defaultState",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -54,11 +44,21 @@
                 "name": "defaultState",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    disabled: false,\r\n    checked: false,\r\n  },\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRadio type=\"radio\" />`,\r\n  }),\r\n}"
+            },
+            {
+                "name": "defaultState",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/form-controls/range.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRange type=\"range\" />`,\r\n  }),\r\n}"
             },
             {
                 "name": "Disabled",
@@ -71,54 +71,54 @@
                 "defaultValue": "{\n  args: {\n    variant: 'primary',\n    disabled: true,\n  },\n}"
             },
             {
-                "name": "Disabled",
+                "name": "DisabledChecked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
+                "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    disabled: true,\r\n  },\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" [disabled]=\"true\" />`,\r\n  }),\r\n}"
             },
             {
                 "name": "DisabledChecked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" disabled />`,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRadio type=\"radio\" [disabled]=\"true\" />`,\r\n  }),\r\n}"
             },
             {
-                "name": "DisabledChecked",
+                "name": "disabledState",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                "file": "projects/solias-components/src/stories/form-controls/range.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    disabled: true,\r\n    checked: true\r\n  }\r\n}"
-            },
-            {
-                "name": "DisabledUnchecked",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" disabled />`,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRange type=\"range\" [disabled]=\"true\" />`,\r\n  }),\r\n}"
             },
             {
                 "name": "DisabledUnchecked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    disabled: true,\r\n    checked: false\r\n  }\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" [disabled]=\"true\" checked />`,\r\n  }),\r\n}"
+            },
+            {
+                "name": "DisabledUnchecked",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRadio type=\"radio\" [disabled]=\"true\" checked />`,\r\n  }),\r\n}"
             },
             {
                 "name": "Error",
@@ -194,11 +194,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
+                "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<SoliasDatePickerComponent>",
-                "defaultValue": "{\r\n  component: SoliasDatePickerComponent,\r\n  title: 'Form Controls/Date Picker',\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    selectedDate: { control: 'date' },\r\n    disabled: {\r\n      control: 'boolean',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    readonly: {\r\n      control: 'boolean',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n  },\r\n}"
+                "type": "Meta<SoliasCheckboxDirective>",
+                "defaultValue": "{\r\n  title: 'Form Controls/Checkbox',\r\n  component: SoliasCheckboxDirective,\r\n  tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -214,21 +214,41 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<SoliasCheckboxDirective>",
-                "defaultValue": "{\r\n  title: 'Selections/Checkbox',\r\n  component: SoliasCheckboxDirective,\r\n  tags: ['autodocs']\r\n}"
+                "type": "Meta<SoliasRadioDirective>",
+                "defaultValue": "{\r\n  title: 'Form Controls/Radio',\r\n  component: SoliasRadioDirective,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                "file": "projects/solias-components/src/stories/form-controls/range.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<SoliasRadioComponent>",
-                "defaultValue": "{\r\n  title: 'Selections/Radio',\r\n  component: SoliasRadioComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    disabled: {\r\n      control: 'boolean',\r\n      label: 'Disabled',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    checked: {\r\n      control: 'boolean',\r\n      label: 'Checked',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    label: {\r\n      control: 'text',\r\n      label: 'Label',\r\n      type: 'string',\r\n    },\r\n    id: {\r\n      control: 'text',\r\n      label: 'Id',\r\n      type: 'string',\r\n    },\r\n    value: {\r\n      control: 'text',\r\n      label: 'Value',\r\n      type: 'string',\r\n    },\r\n    name: {\r\n      control: 'text',\r\n      label: 'Name',\r\n      type: 'string',\r\n    }\r\n  },\r\n  args: { valueChange: fn() },\r\n}"
+                "type": "Meta<SoliasRangeDirective>",
+                "defaultValue": "{\r\n  title: 'Form Controls/Range',\r\n  component: SoliasRangeDirective,\r\n  tags: ['autodocs']\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SoliasSelectDirective>",
+                "defaultValue": "{\r\n  component: SoliasSelectDirective,\r\n  title: 'Form Controls/Select',\r\n  tags: ['autodocs'],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SoliasTextareaDirective>",
+                "defaultValue": "{\r\n  component: SoliasTextareaDirective,\r\n  title: 'Form Controls/Textarea',\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "numberInput",
@@ -281,16 +301,6 @@
                 "defaultValue": "{\n  args: {\n    variant: 'primary',\n  },\n}"
             },
             {
-                "name": "Readonly",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    readonly: true,\r\n  },\r\n}"
-            },
-            {
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -299,6 +309,26 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    variant: 'secondary',\n  },\n}"
+            },
+            {
+                "name": "Select",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<select soliasSelect>\r\n        <option selected>Choose a country</option>\r\n        <option value=\"US\">Sri Lanka</option>\r\n        <option value=\"US\">United States</option>\r\n        <option value=\"CA\">Canada</option>\r\n        <option value=\"FR\">France</option>\r\n        <option value=\"DE\">Germany</option>\r\n    </select>`,\r\n  }),\r\n}"
+            },
+            {
+                "name": "SelectDisabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: args,\r\n        template: `<select soliasSelect [disabled]=\"true\">\r\n            <option selected>Choose a country</option>\r\n            <option value=\"US\">Sri Lanka</option>\r\n            <option value=\"US\">United States</option>\r\n            <option value=\"CA\">Canada</option>\r\n            <option value=\"FR\">France</option>\r\n            <option value=\"DE\">Germany</option>\r\n        </select>`,\r\n      }),\r\n}"
             },
             {
                 "name": "Small",
@@ -331,6 +361,26 @@
                 "defaultValue": "{\n  args: {\n    variant: 'tertiary',\n  },\n}"
             },
             {
+                "name": "textarea",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<textarea soliasTextarea placeholder=\"Enter text\"></textarea>`,\r\n  }),\r\n}"
+            },
+            {
+                "name": "textareaDisabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<textarea soliasTextarea [disabled]=\"true\">Disabled text</textarea>`,\r\n  }),\r\n}"
+            },
+            {
                 "name": "textInput",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -358,8 +408,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<SoliasDatePickerComponent>",
-                "file": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
+                "rawtype": "StoryObj<SoliasCheckboxDirective>",
+                "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -380,8 +430,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<SoliasCheckboxDirective>",
-                "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                "rawtype": "StoryObj<SoliasRadioDirective>",
+                "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -391,8 +441,30 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<SoliasRadioComponent>",
-                "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                "rawtype": "StoryObj<SoliasRangeDirective>",
+                "file": "projects/solias-components/src/stories/form-controls/range.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<SoliasSelectDirective>",
+                "file": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<SoliasTextareaDirective>",
+                "file": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -401,12 +473,12 @@
         ],
         "enumerations": [],
         "groupedVariables": {
-            "projects/solias-components/src/stories/selections/checkbox.stories.ts": [
+            "projects/solias-components/src/stories/form-controls/checkbox.stories.ts": [
                 {
                     "name": "Checked",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -416,7 +488,7 @@
                     "name": "defaultState",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -426,125 +498,115 @@
                     "name": "DisabledChecked",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" disabled />`,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" [disabled]=\"true\" />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "DisabledUnchecked",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" disabled />`,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasCheckbox type=\"checkbox\" [disabled]=\"true\" checked />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SoliasCheckboxDirective>",
-                    "defaultValue": "{\r\n  title: 'Selections/Checkbox',\r\n  component: SoliasCheckboxDirective,\r\n  tags: ['autodocs']\r\n}"
+                    "defaultValue": "{\r\n  title: 'Form Controls/Checkbox',\r\n  component: SoliasCheckboxDirective,\r\n  tags: ['autodocs']\r\n}"
                 }
             ],
-            "projects/solias-components/src/stories/selections/radio.stories.ts": [
+            "projects/solias-components/src/stories/form-controls/radio.stories.ts": [
                 {
                     "name": "Checked",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    disabled: false,\r\n    checked: true\r\n  }\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRadio type=\"radio\" checked />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "defaultState",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    disabled: false,\r\n    checked: false,\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRadio type=\"radio\" />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "DisabledChecked",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    disabled: true,\r\n    checked: true\r\n  }\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRadio type=\"radio\" [disabled]=\"true\" />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "DisabledUnchecked",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    disabled: true,\r\n    checked: false\r\n  }\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRadio type=\"radio\" [disabled]=\"true\" checked />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<SoliasRadioComponent>",
-                    "defaultValue": "{\r\n  title: 'Selections/Radio',\r\n  component: SoliasRadioComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    disabled: {\r\n      control: 'boolean',\r\n      label: 'Disabled',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    checked: {\r\n      control: 'boolean',\r\n      label: 'Checked',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    label: {\r\n      control: 'text',\r\n      label: 'Label',\r\n      type: 'string',\r\n    },\r\n    id: {\r\n      control: 'text',\r\n      label: 'Id',\r\n      type: 'string',\r\n    },\r\n    value: {\r\n      control: 'text',\r\n      label: 'Value',\r\n      type: 'string',\r\n    },\r\n    name: {\r\n      control: 'text',\r\n      label: 'Name',\r\n      type: 'string',\r\n    }\r\n  },\r\n  args: { valueChange: fn() },\r\n}"
+                    "type": "Meta<SoliasRadioDirective>",
+                    "defaultValue": "{\r\n  title: 'Form Controls/Radio',\r\n  component: SoliasRadioDirective,\r\n  tags: ['autodocs'],\r\n}"
                 }
             ],
-            "projects/solias-components/src/stories/form-controls/datepicker.stories.ts": [
+            "projects/solias-components/src/stories/form-controls/range.stories.ts": [
                 {
-                    "name": "Default",
+                    "name": "defaultState",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/range.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRange type=\"range\" />`,\r\n  }),\r\n}"
                 },
                 {
-                    "name": "Disabled",
+                    "name": "disabledState",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/range.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    disabled: true,\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasRange type=\"range\" [disabled]=\"true\" />`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
+                    "file": "projects/solias-components/src/stories/form-controls/range.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<SoliasDatePickerComponent>",
-                    "defaultValue": "{\r\n  component: SoliasDatePickerComponent,\r\n  title: 'Form Controls/Date Picker',\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    selectedDate: { control: 'date' },\r\n    disabled: {\r\n      control: 'boolean',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n    readonly: {\r\n      control: 'boolean',\r\n      table: { defaultValue: { summary: 'false' } },\r\n    },\r\n  },\r\n}"
-                },
-                {
-                    "name": "Readonly",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    readonly: true,\r\n  },\r\n}"
+                    "type": "Meta<SoliasRangeDirective>",
+                    "defaultValue": "{\r\n  title: 'Form Controls/Range',\r\n  component: SoliasRangeDirective,\r\n  tags: ['autodocs']\r\n}"
                 }
             ],
             "projects/solias-components/src/stories/buttons/button.stories.ts": [
@@ -731,6 +793,70 @@
                     "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<input soliasInput type=\"text\" placeholder=\"Enter text\" />`,\r\n  }),\r\n}"
                 }
             ],
+            "projects/solias-components/src/stories/form-controls/select.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SoliasSelectDirective>",
+                    "defaultValue": "{\r\n  component: SoliasSelectDirective,\r\n  title: 'Form Controls/Select',\r\n  tags: ['autodocs'],\r\n}"
+                },
+                {
+                    "name": "Select",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<select soliasSelect>\r\n        <option selected>Choose a country</option>\r\n        <option value=\"US\">Sri Lanka</option>\r\n        <option value=\"US\">United States</option>\r\n        <option value=\"CA\">Canada</option>\r\n        <option value=\"FR\">France</option>\r\n        <option value=\"DE\">Germany</option>\r\n    </select>`,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "SelectDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: args,\r\n        template: `<select soliasSelect [disabled]=\"true\">\r\n            <option selected>Choose a country</option>\r\n            <option value=\"US\">Sri Lanka</option>\r\n            <option value=\"US\">United States</option>\r\n            <option value=\"CA\">Canada</option>\r\n            <option value=\"FR\">France</option>\r\n            <option value=\"DE\">Germany</option>\r\n        </select>`,\r\n      }),\r\n}"
+                }
+            ],
+            "projects/solias-components/src/stories/form-controls/textarea.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SoliasTextareaDirective>",
+                    "defaultValue": "{\r\n  component: SoliasTextareaDirective,\r\n  title: 'Form Controls/Textarea',\r\n  tags: ['autodocs'],\r\n}"
+                },
+                {
+                    "name": "textarea",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<textarea soliasTextarea placeholder=\"Enter text\"></textarea>`,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "textareaDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<textarea soliasTextarea [disabled]=\"true\">Disabled text</textarea>`,\r\n  }),\r\n}"
+                }
+            ],
             "projects/solias-components/.storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -760,13 +886,13 @@
                     "kind": 183
                 }
             ],
-            "projects/solias-components/src/stories/form-controls/datepicker.stories.ts": [
+            "projects/solias-components/src/stories/form-controls/checkbox.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<SoliasDatePickerComponent>",
-                    "file": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
+                    "rawtype": "StoryObj<SoliasCheckboxDirective>",
+                    "file": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -786,26 +912,52 @@
                     "kind": 183
                 }
             ],
-            "projects/solias-components/src/stories/selections/checkbox.stories.ts": [
+            "projects/solias-components/src/stories/form-controls/radio.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<SoliasCheckboxDirective>",
-                    "file": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                    "rawtype": "StoryObj<SoliasRadioDirective>",
+                    "file": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
                     "kind": 183
                 }
             ],
-            "projects/solias-components/src/stories/selections/radio.stories.ts": [
+            "projects/solias-components/src/stories/form-controls/range.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<SoliasRadioComponent>",
-                    "file": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                    "rawtype": "StoryObj<SoliasRangeDirective>",
+                    "file": "projects/solias-components/src/stories/form-controls/range.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/solias-components/src/stories/form-controls/select.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SoliasSelectDirective>",
+                    "file": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/solias-components/src/stories/form-controls/textarea.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SoliasTextareaDirective>",
+                    "file": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -940,27 +1092,47 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Default",
+                "name": "Checked",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Disabled",
+                "name": "defaultState",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DisabledChecked",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DisabledUnchecked",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -970,17 +1142,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Readonly",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/solias-components/src/stories/form-controls/datepicker.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/checkbox.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -1080,7 +1242,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1090,7 +1252,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1100,7 +1262,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1110,7 +1272,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1120,7 +1282,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1130,7 +1292,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/selections/checkbox.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/radio.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -1140,17 +1302,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/selections/radio.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Checked",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/range.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1160,27 +1312,17 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/range.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "DisabledChecked",
+                "name": "disabledState",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/selections/radio.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "DisabledUnchecked",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/range.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1190,7 +1332,87 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/solias-components/src/stories/selections/radio.stories.ts",
+                "filePath": "projects/solias-components/src/stories/form-controls/range.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Select",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SelectDisabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/select.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "textarea",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "textareaDisabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/solias-components/src/stories/form-controls/textarea.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
