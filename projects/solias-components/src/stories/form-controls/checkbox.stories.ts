@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { SoliasCheckboxDirective } from '../../public-api';
 
 const meta: Meta<SoliasCheckboxDirective> = {
-  title: 'Selections/Checkbox',
+  title: 'Form Controls/Checkbox',
   component: SoliasCheckboxDirective,
   tags: ['autodocs']
 };

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { SoliasRadioDirective } from '../../public-api';
 
 const meta: Meta<SoliasRadioDirective> = {
-  title: 'Selections/Radio',
+  title: 'Form Controls/Radio',
   component: SoliasRadioDirective,
   tags: ['autodocs'],
 };

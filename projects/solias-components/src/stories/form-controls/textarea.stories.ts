@@ -17,8 +17,8 @@ export const textarea: Story = {
 };
 
 export const textareaDisabled: Story = {
-    render: (args) => ({
-      props: args,
-      template: `<textarea soliasTextarea [disabled]="true">Disabled text</textarea>`,
-    }),
-  };
+  render: (args) => ({
+    props: args,
+    template: `<textarea soliasTextarea [disabled]="true">Disabled text</textarea>`,
+  }),
+};
