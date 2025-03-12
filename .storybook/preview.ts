@@ -1,4 +1,6 @@
-import type { Preview } from '@storybook/web-components'
+import type { Preview } from '@storybook/web-components';
+import { withThemeByClassName } from '@storybook/addon-themes';
+import '../styles/index.scss'
 
 const preview: Preview = {
   parameters: {
@@ -9,6 +11,15 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    withThemeByClassName({
+      themes: {
+        light: 'light', // No class applied for light theme
+        dark: 'dark', // Apply 'dark' class for dark theme
+      },
+      defaultTheme: 'light', // Default theme
+    }),
+  ],
 };
 
 export default preview;

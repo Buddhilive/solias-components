@@ -22,8 +22,7 @@ export const Button = ({ primary, backgroundColor, size, label, onClick }: Butto
   return html`
     <button
       type="button"
-      class=${['storybook-button', `storybook-button--${size || 'medium'}`, mode].join(' ')}
-      style=${styleMap({ backgroundColor })}
+      class=${['bg-red-500 p-4 rounded-md text-white cursor-pointer']}
       @click=${onClick}
     >
       ${label}
