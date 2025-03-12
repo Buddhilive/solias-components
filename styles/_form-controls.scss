@@ -38,3 +38,11 @@ input[type="checkbox"] {
     @apply cursor-not-allowed;
   }
 }
+
+input[type="radio"] {
+  @apply w-8 h-8 text-primary-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600;
+  accent-color: var(--color-primary-500);
+  &:disabled {
+    @apply cursor-not-allowed;
+  }
+}
