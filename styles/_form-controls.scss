@@ -30,3 +30,11 @@ textarea {
     @apply cursor-not-allowed;
   }
 }
+
+input[type="checkbox"] {
+  @apply w-8 h-8 text-primary-600 bg-gray-100 border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-600 outline-none;
+  accent-color: var(--color-primary-500);
+  &:disabled {
+    @apply cursor-not-allowed;
+  }
+}
