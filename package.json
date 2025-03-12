@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "concurrently --names \"tailwind,storybook\" --prefix \"[{name}]\" --prefix-colors \"bgBlue.bold,bgMagenta.bold\" \"npm run tailwind:watch\" \"npm run storybook\"",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -27,6 +28,7 @@
     "@storybook/web-components-vite": "^8.6.4",
     "@tailwindcss/cli": "^4.0.13",
     "@tailwindcss/postcss": "^4.0.13",
+    "concurrently": "^9.1.2",
     "sass-embedded": "^1.85.1",
     "storybook": "^8.6.4",
     "typescript": "~5.7.2",
