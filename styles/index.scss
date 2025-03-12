@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@import './_form-controls.scss';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  @apply bg-white dark:bg-gray-900 text-gray-500 dark:text-gray-400;
+}
