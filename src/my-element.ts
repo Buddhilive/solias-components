@@ -35,7 +35,7 @@ export class MyElement extends LitElement {
       </div>
       <slot></slot>
       <div class="card">
-        <button @click=${this._onClick} part="button">
+        <button @click=${this._onClick} part="button" class="dark:bg-blue-500">
           count is ${this.count}
         </button>
       </div>
