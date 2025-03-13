@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Lit + TS</title>
     <link rel="stylesheet" href="./build/tailwind.scss" />
-    <script type="module" src="/src/my-element.ts"></script>
+    <script type="module" src="/src/index.ts"></script>
   </head>
   <body class="dark">
-    <my-element>
-      <h1 class="text-red-500">Vite + Lit</h1>
-    </my-element>
+    <solias-tab>
+      <div slot="tab">Hello</div>
+      <div slot="panel">Hello content</div>
+      <div slot="tab">Hello 2</div>
+      <div slot="panel">Hello 2 content</div>
+      <div slot="tab">Hello 3</div>
+      <div slot="panel">Hello 3 content</div>
+    </solias-tab>
   </body>
 </html>

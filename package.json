@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "concurrently --names \"tailwind,storybook\" --prefix \"[{name}]\" --prefix-colors \"bgBlue.bold,bgMagenta.bold\" \"npm run tailwind:watch\" \"npm run storybook\"",
+    "start:dev": "concurrently --names \"tailwind,lit\" --prefix \"[{name}]\" --prefix-colors \"bgBlue.bold,bgYellow.bold\" \"npm run tailwind:watch\" \"npm run dev\"",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
