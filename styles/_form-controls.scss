@@ -59,7 +59,6 @@ input[type="file"] {
     padding-inline: 1rem;
     cursor: pointer;
     margin-right: 1rem;
-    
   }
   &:where(.dark, .dark *) {
     &::file-selector-button {
@@ -73,4 +72,20 @@ input[type="file"] {
       @apply cursor-not-allowed;
     }
   }
+}
+
+input[type="range"] {
+  appearance: none;
+  @apply w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700;
+  &::-webkit-slider-thumb, &::-moz-range-thumb {
+    -webkit-appearance: none;
+    @apply bg-primary-500 rounded-full w-4 h-4 cursor-pointer;
+  }
+  &::-webkit-slider-runnable-track, &::-moz-range-track {
+    @apply w-full h-1 bg-primary-200 rounded-lg cursor-pointer dark:bg-primary-700;
+  }
+}
+
+label {
+  @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
 }
