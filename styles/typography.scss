@@ -37,3 +37,11 @@ u {
 a {
   @apply text-primary-500;
 }
+
+ul {
+  @apply max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400;
+}
+
+ol {
+  @apply max-w-md space-y-1 text-gray-500 list-decimal list-inside dark:text-gray-400;
+}
