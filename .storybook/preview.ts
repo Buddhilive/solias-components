@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/web-components';
 import { withThemeByClassName } from '@storybook/addon-themes';
-import '../build/tailwind.css'
+import '../build/tailwind.scss'
 
 const preview: Preview = {
   parameters: {
