@@ -31,7 +31,10 @@ const meta = {
         'email',
         'password',
         'url',
-        'tel'
+        'tel',
+        'date',
+        'time',
+        'datetime-local'
       ],
       table: { defaultValue: { summary: 'text' }}
     }
@@ -42,12 +45,6 @@ export default meta;
 type Story = StoryObj<SoliasInputProps>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const inputDefault: Story = {
-  args: {
-    type: 'text'
-  }
-};
-
 export const inputDisabled: Story = {
   args: {
     disabled: true
