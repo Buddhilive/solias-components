@@ -10,7 +10,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006 --ci",
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build -o docs",
     "tailwind:watch": "npx @tailwindcss/cli -i ./styles/index.scss -o ./build/tailwind.scss --watch",
     "tailwind:build": "npx @tailwindcss/cli -i ./styles/index.scss -o ./build/tailwind.min.css --minify"
   },
