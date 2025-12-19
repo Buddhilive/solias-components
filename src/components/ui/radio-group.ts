@@ -1,9 +1,5 @@
 import { LitElement, html, css, type PropertyValueMap } from "lit";
-import {
-  customElement,
-  property,
-  queryAssignedElements,
-} from "lit/decorators.js";
+import { customElement, property } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { tailwindStyles } from "../../utils/styles";
 
@@ -14,8 +10,11 @@ export class SoliasRadioGroup extends LitElement {
   @property({ type: Boolean }) required = false;
   @property({ type: Boolean }) disabled = false;
 
-  @queryAssignedElements({ selector: "solias-radio-item" })
-  radioItems!: Array<SoliasRadioItem>;
+  get radioItems(): SoliasRadioItem[] {
+    return Array.from(
+      this.querySelectorAll("solias-radio-item")
+    ) as SoliasRadioItem[];
+  }
 
   static styles = [
     tailwindStyles,
