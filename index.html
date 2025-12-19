@@ -55,6 +55,20 @@
           <solias-input value="With Value"></solias-input>
         </div>
       </div>
+      <div
+        class="flex flex-col gap-4 p-8 border rounded-xl bg-card text-card-foreground shadow-sm w-full max-w-md"
+      >
+        <h2 class="text-2xl font-bold">Select Component</h2>
+        <div class="flex flex-col gap-4">
+          <solias-select placeholder="Select a fruit">
+            <solias-select-item value="apple">Apple</solias-select-item>
+            <solias-select-item value="banana">Banana</solias-select-item>
+            <solias-select-item value="orange">Orange</solias-select-item>
+          </solias-select>
+
+          <solias-select placeholder="Disabled" disabled></solias-select>
+        </div>
+      </div>
     </main>
   </body>
 </html>
