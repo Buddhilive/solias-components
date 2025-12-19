@@ -69,6 +69,55 @@
           <solias-select placeholder="Disabled" disabled></solias-select>
         </div>
       </div>
+
+      <div
+        class="flex flex-col gap-4 p-8 border rounded-xl bg-card text-card-foreground shadow-sm w-full max-w-md"
+      >
+        <h2 class="text-2xl font-bold">Checkbox Component</h2>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-2">
+            <solias-checkbox id="c1"></solias-checkbox>
+            <label
+              for="c1"
+              class="text-sm font-medium leading-none cursor-pointer"
+              onclick="document.getElementById('c1').click()"
+              >Accept terms and conditions</label
+            >
+          </div>
+          <div class="flex items-center gap-2">
+            <solias-checkbox id="c2" disabled checked></solias-checkbox>
+            <label for="c2" class="text-sm font-medium leading-none opacity-70"
+              >Disabled</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col gap-4 p-8 border rounded-xl bg-card text-card-foreground shadow-sm w-full max-w-md"
+      >
+        <h2 class="text-2xl font-bold">Radio Group Component</h2>
+        <solias-radio-group value="option-one">
+          <div class="flex items-center space-x-2">
+            <solias-radio-item value="option-one" id="r1"></solias-radio-item>
+            <label
+              for="r1"
+              class="text-sm font-medium leading-none cursor-pointer"
+              onclick="document.getElementById('r1').click()"
+              >Option One</label
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <solias-radio-item value="option-two" id="r2"></solias-radio-item>
+            <label
+              for="r2"
+              class="text-sm font-medium leading-none cursor-pointer"
+              onclick="document.getElementById('r2').click()"
+              >Option Two</label
+            >
+          </div>
+        </solias-radio-group>
+      </div>
     </main>
   </body>
 </html>
