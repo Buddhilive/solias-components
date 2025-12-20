@@ -1,23 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { html } from "lit";
-import "../components/ui/button";
+import "../../components/ui/button";
 
 const meta: Meta = {
-  title: "UI/Button",
+  title: "solias-doc/Button",
   component: "solias-button",
   tags: ["autodocs"],
   argTypes: {
     variant: {
-      control: "select",
+      control: { type: "select" },
       options: ["primary", "secondary", "outline"],
     },
     size: {
-      control: "select",
+      control: { type: "select" },
       options: ["sm", "md", "lg"],
     },
-    disabled: {
-      control: "boolean",
-    },
+    disabled: { control: "boolean" },
   },
   render: (args) => html`
     <solias-button
@@ -25,7 +23,7 @@ const meta: Meta = {
       .size=${args.size}
       ?disabled=${args.disabled}
     >
-      ${args.label || "Button"}
+      ${args.slot || "Button"}
     </solias-button>
   `,
 };
@@ -36,27 +34,41 @@ type Story = StoryObj;
 export const Primary: Story = {
   args: {
     variant: "primary",
-    label: "Primary Button",
+    slot: "Primary Button",
   },
 };
 
 export const Secondary: Story = {
   args: {
     variant: "secondary",
-    label: "Secondary Button",
+    slot: "Secondary Button",
   },
 };
 
 export const Outline: Story = {
   args: {
     variant: "outline",
-    label: "Outline Button",
+    slot: "Outline Button",
   },
 };
 
 export const Disabled: Story = {
   args: {
     disabled: true,
-    label: "Disabled Button",
+    slot: "Disabled Button",
+  },
+};
+
+export const Small: Story = {
+  args: {
+    size: "sm",
+    slot: "Small Button",
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: "lg",
+    slot: "Large Button",
   },
 };
