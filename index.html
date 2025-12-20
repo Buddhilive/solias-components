@@ -1,21 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Lit + TS</title>
-    <link rel="stylesheet" href="./build/tailwind.scss" />
-    <script type="module" src="/src/index.ts"></script>
+    <title>solias-components</title>
+    <link rel="stylesheet" href="./src/styles/tailwind.css" />
+    <script type="module" src="/src/components/index.ts"></script>
+    <script>
+      function toggleTheme() {
+        document.documentElement.classList.toggle("dark");
+      }
+    </script>
   </head>
-  <body class="dark">
-    <solias-tab>
-      <div slot="tab">Hello</div>
-      <div slot="panel">Hello content</div>
-      <div slot="tab">Hello 2</div>
-      <div slot="panel">Hello 2 content</div>
-      <div slot="tab">Hello 3</div>
-      <div slot="panel">Hello 3 content</div>
-    </solias-tab>
+  <body class="bg-background text-foreground transition-colors duration-300">
+    <div class="fixed top-4 right-4 z-50">
+      <button
+        onclick="toggleTheme()"
+        class="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity cursor-pointer"
+      >
+        Toggle Theme
+      </button>
+    </div>
+
+    <main
+      class="min-h-screen flex flex-col items-center justify-center gap-8 p-4"
+    >
+      <div
+        class="flex flex-col gap-4 p-8 border rounded-xl bg-card text-card-foreground shadow-sm w-full max-w-md"
+      >
+        <h2 class="text-2xl font-bold">Button Components</h2>
+        <div class="flex flex-wrap gap-4">
+          <solias-button>Default</solias-button>
+          <solias-button variant="secondary">Secondary</solias-button>
+          <solias-button variant="outline">Outline</solias-button>
+          <solias-button disabled>Disabled</solias-button>
+        </div>
+
+        <div class="flex flex-wrap gap-4 items-center mt-4">
+          <solias-button size="sm">Small</solias-button>
+          <solias-button size="md">Medium</solias-button>
+          <solias-button size="lg">Large</solias-button>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col gap-4 p-8 border rounded-xl bg-card text-card-foreground shadow-sm w-full max-w-md"
+      >
+        <h2 class="text-2xl font-bold">Input Components</h2>
+        <div class="flex flex-col gap-4">
+          <solias-input placeholder="Default Input"></solias-input>
+          <solias-input placeholder="Email" type="email"></solias-input>
+          <solias-input placeholder="Disabled" disabled></solias-input>
+          <solias-input value="With Value"></solias-input>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-4 p-8 border rounded-xl bg-card text-card-foreground shadow-sm w-full max-w-md"
+      >
+        <h2 class="text-2xl font-bold">Textarea Component</h2>
+        <div class="flex flex-col gap-4">
+          <solias-textarea
+            placeholder="Type your message here."
+          ></solias-textarea>
+          <solias-textarea placeholder="Disabled" disabled></solias-textarea>
+          <solias-textarea value="With initial value"></solias-textarea>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-4 p-8 border rounded-xl bg-card text-card-foreground shadow-sm w-full max-w-md"
+      >
+        <h2 class="text-2xl font-bold">Select Component</h2>
+        <div class="flex flex-col gap-4">
+          <solias-select placeholder="Select a fruit">
+            <solias-select-item value="apple">Apple</solias-select-item>
+            <solias-select-item value="banana">Banana</solias-select-item>
+            <solias-select-item value="orange">Orange</solias-select-item>
+          </solias-select>
+
+          <solias-select placeholder="Disabled" disabled></solias-select>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col gap-4 p-8 border rounded-xl bg-card text-card-foreground shadow-sm w-full max-w-md"
+      >
+        <h2 class="text-2xl font-bold">Checkbox Component</h2>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-2">
+            <solias-checkbox id="c1"></solias-checkbox>
+            <label
+              for="c1"
+              class="text-sm font-medium leading-none cursor-pointer"
+              onclick="document.getElementById('c1').click()"
+              >Accept terms and conditions</label
+            >
+          </div>
+          <div class="flex items-center gap-2">
+            <solias-checkbox id="c2" disabled checked></solias-checkbox>
+            <label for="c2" class="text-sm font-medium leading-none opacity-70"
+              >Disabled</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col gap-4 p-8 border rounded-xl bg-card text-card-foreground shadow-sm w-full max-w-md"
+      >
+        <h2 class="text-2xl font-bold">Radio Group Component</h2>
+        <solias-radio-group value="option-one">
+          <div class="flex items-center space-x-2">
+            <solias-radio-item value="option-one" id="r1"></solias-radio-item>
+            <label
+              for="r1"
+              class="text-sm font-medium leading-none cursor-pointer"
+              onclick="document.getElementById('r1').click()"
+              >Option One</label
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <solias-radio-item value="option-two" id="r2"></solias-radio-item>
+            <label
+              for="r2"
+              class="text-sm font-medium leading-none cursor-pointer"
+              onclick="document.getElementById('r2').click()"
+              >Option Two</label
+            >
+          </div>
+        </solias-radio-group>
+      </div>
+    </main>
   </body>
 </html>
