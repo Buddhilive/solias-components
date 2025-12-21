@@ -4,3 +4,4 @@ export * from "./ui/select";
 export * from "./ui/checkbox";
 export * from "./ui/radio-group";
 export * from "./ui/textarea";
+export * from "./ui/accordion";
