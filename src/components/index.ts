@@ -6,3 +6,4 @@ export * from "./ui/radio-group";
 export * from "./ui/textarea";
 export * from "./ui/accordion";
 export * from "./ui/alert-dialog";
+export * from "./ui/alert";
