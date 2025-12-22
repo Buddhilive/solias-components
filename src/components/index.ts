@@ -7,3 +7,4 @@ export * from "./ui/textarea";
 export * from "./ui/accordion";
 export * from "./ui/alert-dialog";
 export * from "./ui/alert";
+export * from "./ui/aspect-ratio";
