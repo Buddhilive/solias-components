@@ -8,3 +8,4 @@ export * from "./ui/accordion";
 export * from "./ui/alert-dialog";
 export * from "./ui/alert";
 export * from "./ui/aspect-ratio";
+export * from "./ui/avatar";
