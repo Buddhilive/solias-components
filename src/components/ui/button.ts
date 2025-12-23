@@ -14,13 +14,18 @@ export class SoliasButton extends LitElement {
     css`
       :host {
         display: inline-block;
+        --solias-button-border-radius: 0.5rem;
+      }
+
+      button {
+        border-radius: var(--solias-button-border-radius);
       }
     `,
   ];
 
   render() {
     const baseClasses =
-      "inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:opacity-50 disabled:pointer-events-none ring-offset-background";
+      "inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:opacity-50 disabled:pointer-events-none ring-offset-background";
 
     const variants = {
       primary: "bg-primary text-primary-foreground hover:bg-primary/90",
