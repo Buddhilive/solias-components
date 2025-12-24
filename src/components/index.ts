@@ -11,3 +11,4 @@ export * from "./ui/aspect-ratio";
 export * from "./ui/avatar";
 export * from "./ui/breadcrumb";
 export * from "./ui/button-group";
+export * from "./ui/calendar";
