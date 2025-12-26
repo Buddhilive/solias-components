@@ -12,3 +12,6 @@ export * from "./ui/avatar";
 export * from "./ui/breadcrumb";
 export * from "./ui/button-group";
 export * from "./ui/calendar";
+export * from "./ui/card";
+export * from "./ui/carousel";
+export * from "./ui/chart";
